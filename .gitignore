@@ -1,0 +1,73 @@
+# ---------------------------------------------------------------------------
+# Proyecto Bactericidas
+#
+# Criterio: se versiona lo que define el trabajo (codigo, esquema, README y
+# reporte) y se excluye todo lo que el script regenera o lo que excede el
+# tamano razonable de un repositorio publico.
+#
+# Toda la carpeta db/ se reconstruye con:  python scripts/build_db.py
+# ---------------------------------------------------------------------------
+
+# --- Datos de origen -------------------------------------------------------
+# El CSV crudo pesa ~82 MB: supera el limite recomendado de GitHub (50 MB) y se
+# acerca al maximo por archivo (100 MB). Distribuirlo por Git LFS, Zenodo o un
+# enlace en el README.
+Full_data_set*.csv
+*.csv.gz
+*.xlsx
+*.xls
+~$*.xls*
+
+# --- Salidas generadas -----------------------------------------------------
+# La base completa (~72 MB) y las tablas exportadas (~29 MB) son reproducibles.
+db/*.sqlite
+db/*.sqlite3
+db/*.db
+db/csv/
+# copia de scripts/schema.sql que emite el script; la fuente es la de scripts/
+db/schema.sql
+
+# Se versionan explicitamente (contrapeso de las reglas anteriores):
+!db/README.md
+!db/reporte_inconsistencias.md
+
+# --- Python ----------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+.ipynb_checkpoints/
+.pytest_cache/
+.mypy_cache/
+
+# --- R ---------------------------------------------------------------------
+.Rhistory
+.RData
+.Rproj.user/
+
+# --- Entorno y credenciales ------------------------------------------------
+.env
+.env.*
+*.pem
+*.key
+
+# --- Editores --------------------------------------------------------------
+.vscode/
+.idea/
+*.code-workspace
+*.swp
+
+# --- Sistema operativo -----------------------------------------------------
+Thumbs.db
+ehthumbs.db
+desktop.ini
+.DS_Store
+
+# --- Temporales ------------------------------------------------------------
+*.log
+*.tmp
+*.bak
+tmp/
+scratch/
