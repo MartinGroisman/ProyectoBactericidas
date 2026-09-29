@@ -1,0 +1,570 @@
+Gene name,Locus Tag,Gene Product,Strand,log-2 fold change (pPhrS / pEV),PhrS target
+PA0014,PA0014,hypothetical protein,-,1.38293655034391,-
+betC,PA0031,choline sulfatase,-,1.32839905148438,-
+PA0034,PA0034,probable two-component response regulator,-,1.38597739686967,-
+PA0038,PA0038,hypothetical protein,+,2.7735497649276,-
+PA0048,PA0048,probable transcriptional regulator,-,-1.00661559518762,-
+PA0049,PA0049,hypothetical protein,-,-1.22737189397254,-
+PA0050,PA0050,hypothetical protein,+,-1.01737312305818,yes
+osmC,PA0059,osmotically inducible protein OsmC,+,3.57656956710223,-
+PA0060,PA0060,conserved hypothetical protein,+,3.044308105481,-
+PA0062,PA0062,hypothetical protein,-,1.74574136642092,-
+tssB1,PA0083,"type VI secretion protein, TssB1",+,-1.43435222576305,-
+hcp1,PA0085,Hcp1,+,-1.29469564219752,-
+tssE1,PA0087,"type VI secretion protein, TssE1",+,-1.00981749731571,-
+PA0134,PA0134,probable guanine deaminase,-,1.64121268033455,-
+PA0156,PA0156,"Resistance-Nodulation-Cell Division (RND) triclosan efflux membrane fusion protein, TriA",+,1.81768742767562,-
+PA0157,PA0157,"Resistance-Nodulation-Cell Division (RND) triclosan efflux membrane fusion protein, TriB",+,1.96011738335638,-
+PA0158,PA0158,"Resistance-Nodulation-Cell Division (RND) triclosan efflux transporter, TriC",+,1.33297206730131,-
+PA0159,PA0159,probable transcriptional regulator,+,1.11695887845182,-
+PA0186,PA0186,probable binding protein component of ABC transporter,+,1.01123828057499,-
+PA0187,PA0187,hypothetical protein,+,2.7145257698342,-
+PA0188,PA0188,hypothetical protein,+,1.36153268432195,-
+pcaT,PA0229,dicarboxylic acid transporter PcaT,+,3.00968104261106,-
+pcaB,PA0230,"3-carboxy-cis,cis-muconate cycloisomerase",+,2.79571827004816,-
+pcaD,PA0231,beta-ketoadipate enol-lactone hydrolase,+,3.63782514995204,-
+pcaC,PA0232,gamma-carboxymuconolactone decarboxylase,+,2.53576131822344,-
+PA0233,PA0233,probable transcriptional regulator,+,1.59936401087672,-
+spuA,PA0297,probable glutamine amidotransferase,+,-1.27762916194658,-
+spuB,PA0298,Glutamylpolyamine synthetase,+,-1.16244804362306,-
+PA0309,PA0309,hypothetical protein,-,1.99991621317695,-
+PA0343,PA0343,hypothetical protein,-,1.28138121811984,-
+PA0344,PA0344,hypothetical protein,-,1.78435650169966,-
+PA0345,PA0345,hypothetical protein,-,2.17090120998118,-
+PA0354,PA0354,conserved hypothetical protein,-,2.95348798473506,-
+pfpI,PA0355,protease PfpI,-,4.12806709228447,-
+ftsX,PA0375,cell division protein FtsX,+,1.56264882976494,-
+rpoH,PA0376,sigma factor RpoH,+,1.40142887731922,-
+chpC,PA0415,probable chemotaxis protein,+,1.15643452690358,-
+chpD,PA0416,probable transcriptional regulator,+,1.08130292300685,-
+PA0451,PA0451,conserved hypothetical protein,+,1.30299146822813,-
+PA0462,PA0462,hypothetical protein,+,1.57105280603751,yes
+PA0489,PA0489,probable phosphoribosyl transferase,-,2.18803822507052,-
+PA0490,PA0490,hypothetical protein,-,2.40112441603548,-
+PA0497,PA0497,hypothetical protein,-,1.18816679737936,-
+PA0499,PA0499,probable pili assembly chaperone,-,1.33531155729204,-
+rsmY,PA0527.1,regulatory RNA RsmY,+,-1.67925554318224,-
+PA0536,PA0536,hypothetical protein,-,1.1917834908595,-
+PA0537,PA0537,conserved hypothetical protein,-,1.05440210160818,-
+PA0543,PA0543,hypothetical protein,+,2.57453217540698,-
+PA0553,PA0553,hypothetical protein,+,2.35532336915702,-
+PA0554,PA0554,hypothetical protein,+,2.63398007363755,-
+fda,PA0555,"fructose-1,6-bisphosphate aldolase",+,1.52286981346587,-
+PA0556,PA0556,hypothetical protein,+,1.2121406165783,-
+PA0563,PA0563,conserved hypothetical protein,-,-1.13623509430652,-
+PA0567,PA0567,conserved hypothetical protein,+,3.34057817267389,-
+PA0587,PA0587,conserved hypothetical protein,-,1.19500052426866,-
+PA0588,PA0588,conserved hypothetical protein,-,1.46336747821415,yes
+PA0681,PA0681,HxcT,+,2.01672782665745,-
+PA0732,PA0732,hypothetical protein,-,1.87907310978876,-
+PA0736a,PA0736a,–,+,2.47697997959607,-
+PA0737,PA0737,hypothetical protein,+,2.97063834209879,-
+PA0738,PA0738,conserved hypothetical protein,+,2.00607753441541,-
+algU,PA0762,sigma factor AlgU,+,2.11606747916836,-
+mucA,PA0763,anti-sigma factor MucA,+,2.49073945215208,-
+mucB,PA0764,negative regulator for alginate biosynthesis MucB,+,2.3314581903118,-
+mucC,PA0765,positive regulator for alginate biosynthesis MucC,+,1.9359395175873,yes
+PA0777,PA0777,hypothetical protein,-,1.7694622016079,-
+PA0779,PA0779,AsrA,-,1.26707690318227,-
+PA0788a,PA0788a,–,+,1.02216227175649,-
+PA0805,PA0805,hypothetical protein,-,1.23317104515089,-
+PA0819,PA0819,hypothetical protein,+,1.04824602103961,-
+plcR,PA0843,phospholipase accessory protein PlcR precursor,-,2.68267656757284,-
+PA0853,PA0853,probable oxidoreductase,-,1.49214908215158,-
+fumC2,PA0854,fumarate hydratase,-,1.73895749742364,-
+PA0856,PA0856,hypothetical protein,+,1.07509046478375,-
+aroP2,PA0866,aromatic amino acid transport protein AroP2,+,-1.33903754854322,-
+PA0909,PA0909,AlpC,+,1.01146892463689,-
+mgtE,PA0913,MgtE,+,1.32807222164926,-
+PA0919,PA0919,alanyl-phosphatidylglycerol hydrolase,-,1.20865021309331,-
+PA0920,PA0920,alanyl-phosphatidylglycerol synthase,-,1.67278477175102,-
+tolA,PA0971,TolA protein,+,1.14673567243703,-
+PA0978,PA0978,conserved hypothetical protein,-,1.36390948744579,-
+PA0979,PA0979,conserved hypothetical protein,-,1.82801342895182,-
+PA0990,PA0990,conserved hypothetical protein,-,2.25465729923748,-
+bcp,PA1008,bacterioferritin comigratory protein,-,-1.01740425864788,-
+quiP-3',PA1031.1,putative sRNA,-,-1.29543193239653,-
+PA1033,PA1033,probable glutathione S-transferase,-,1.48830344331719,-
+PA1111,PA1111,hypothetical protein,+,4.20327899618759,-
+PA1112,PA1112,conserved hypothetical protein,+,1.94671692464568,-
+PA1114,PA1114,hypothetical protein,-,2.03795740233177,-
+PA1115,PA1115,hypothetical protein,-,1.54548718332048,-
+PA1117,PA1117,hypothetical protein,-,1.08778118481352,-
+PA1186,PA1186,hypothetical protein,+,1.15565477436174,-
+PA1211,PA1211,hypothetical protein,-,-1.16075513851951,-
+PA1212,PA1212,probable major facilitator superfamily (MFS) transporter,-,-1.30391848810769,-
+PA1213,PA1213,hypothetical protein,-,-2.07159628848207,-
+PA1214,PA1214,hypothetical protein,-,-2.49288860777694,-
+PA1215,PA1215,hypothetical protein,-,-2.68828843363339,-
+PA1216,PA1216,hypothetical protein,-,-3.58533601375719,-
+PA1217,PA1217,probable 2-isopropylmalate synthase,-,-3.00459344424389,-
+PA1218,PA1218,hypothetical protein,-,-3.36834350603862,-
+PA1219,PA1219,hypothetical protein,-,-3.68522428032272,-
+PA1220,PA1220,hypothetical protein,-,-2.88530864490534,-
+PA1221,PA1221,hypothetical protein,-,-2.56201544207867,-
+PA1237,PA1237,probable multidrug resistance efflux pump,-,2.7233121672684,-
+PA1242,PA1242,SprP,+,3.62594659970577,-
+PA1243,PA1243,probable sensor/response regulator hybrid,-,2.36812875928881,-
+PA1251,PA1251,probable chemotaxis transducer,-,1.34357992424044,-
+PA1260,PA1260,"ABC transporter periplasmic-binding protein, LhpP",-,2.46760035307339,-
+PA1289,PA1289,hypothetical protein,-,1.1763182860718,yes
+cyoB,PA1318,cytochrome o ubiquinol oxidase subunit I,+,-1.15026793624205,-
+cyoC,PA1319,cytochrome o ubiquinol oxidase subunit III,+,-1.83330480521914,-
+cyoD,PA1320,cytochrome o ubiquinol oxidase subunit IV,+,-1.08325820520803,-
+cyoE,PA1321,cytochrome o ubiquinol oxidase protein CyoE,+,-1.14284810858989,-
+PA1323,PA1323,hypothetical protein,+,4.30356468052042,-
+PA1324,PA1324,hypothetical protein,+,3.61863840788375,-
+P9,PA1324.1,sRNA,+,1.01855501836425,-
+ilvA2,PA1326,"threonine dehydratase, biosynthetic",+,1.01196098495103,-
+PA1331,PA1331,conserved hypothetical protein,-,1.72710481535453,-
+PA1333,PA1333,hypothetical protein,-,1.14106914108424,-
+galE,PA1384,UDP-glucose 4-epimerase,+,2.31436074709551,-
+PA1404,PA1404,hypothetical protein,-,3.35354788346797,-
+PA1407,PA1407,hypothetical protein,-,2.50089856119191,-
+PA1408,PA1408,hypothetical protein,-,2.42703815212689,-
+PA1416,PA1416,conserved hypothetical protein,-,1.40062450906403,-
+PA1429,PA1429,probable cation-transporting P-type ATPase,+,1.83852023157484,yes
+PA1437,PA1437,probable two-component response regulator,+,1.09311326937408,-
+PA1471,PA1471,hypothetical protein,-,2.25425562343912,-
+PA1495,PA1495,hypothetical protein,-,1.49010704259543,-
+PA1496,PA1496,probable potassium channel,-,1.25070280673521,-
+alkB2,PA1525,alkane-1-monooxygenase 2,-,1.24480652328251,-
+PA1538,PA1538,probable flavin-containing monooxygenase,-,1.10997702724285,-
+acnA,PA1562,aconitate hydratase 1,-,1.76575289544394,yes
+PA1592,PA1592,hypothetical protein,-,1.61779891338074,yes
+PA1597,PA1597,hypothetical protein,+,1.04235924894881,-
+PA1605,PA1605,hypothetical protein,+,1.81039667978004,-
+PA1606,PA1606,hypothetical protein,+,2.22079703103716,-
+gpsA,PA1614,"glycerol-3-phosphate dehydrogenase, biosynthetic",+,1.44946619127931,-
+PA1616,PA1616,conserved hypothetical protein,+,1.0005003716473,-
+PA1617,PA1617,probable AMP-binding enzyme,+,1.00804923828169,-
+PA1620,PA1620,hypothetical protein,+,2.06612150179647,-
+PA1625,PA1625,conserved hypothetical protein,+,2.49759763861457,-
+PA1650,PA1650,probable transporter,+,1.31445399996823,-
+PA1652,PA1652,hypothetical protein,+,2.08159408058003,-
+PA1680,PA1680,hypothetical protein,-,1.32905035950382,-
+PA1730,PA1730,conserved hypothetical protein,+,2.37876418191759,-
+PA1731,PA1731,conserved hypothetical protein,+,2.0952153577184,-
+PA1732,PA1732,conserved hypothetical protein,+,2.10726445584475,-
+PA1733,PA1733,conserved hypothetical protein,+,1.12195985593235,-
+pcr4,PA1792,Pseudomonas calcium response gene 4,+,2.47630457093653,-
+PA1832,PA1832,probable protease,+,1.04035590364765,-
+PA1857,PA1857,conserved hypothetical protein,-,1.35149933723719,-
+PA1870,PA1870,hypothetical protein,+,3.07329418343239,-
+PA1882,PA1882,probable transporter,+,2.32117792646181,-
+PA1889,PA1889,hypothetical protein,+,2.12925357657911,-
+phzA2,PA1899,probable phenazine biosynthesis protein,+,-3.89968575146391,-
+phzB2,PA1900,probable phenazine biosynthesis protein,+,-3.09079163725378,-
+phzC2,PA1901,phenazine biosynthesis protein PhzC,+,-2.59348891758312,-
+phzG2,PA1905,probable pyridoxamine 5'-phosphate oxidase,+,-2.28863929951255,-
+nrdD,PA1920,"class III (anaerobic) ribonucleoside-triphosphate reductase subunit, NrdD",-,1.18664019849854,-
+PA1921,PA1921,hypothetical protein,-,4.05119530960695,-
+PA1931,PA1931,probable ferredoxin,+,1.17835714713652,-
+PA1932,PA1932,probable hydroxylase molybdopterin-containing subunit,+,2.45338749449012,-
+PA1933,PA1933,probable hydroxylase large subunit,+,2.22682985788795,-
+PA1940,PA1940,hypothetical protein,-,-1.08668799356656,-
+PA1968,PA1968,hypothetical protein,+,1.1561645041312,-
+PA1969,PA1969,hypothetical protein,+,1.40188047661172,-
+pqqA,PA1985,pyrroloquinoline quinone biosynthesis protein A,+,1.17099280236668,-
+pqqB,PA1986,pyrroloquinoline quinone biosynthesis protein B,+,1.31655890235977,-
+pqqE,PA1989,pyrroloquinoline quinone biosynthesis protein E,+,1.16275334822782,-
+pqqH,PA1990,PqqH,+,1.21306972135685,-
+dhcA,PA1999,"dehydrocarnitine CoA transferase, subunit A",+,-1.04522021437348,-
+dhcB,PA2000,"dehydrocarnitine CoA transferase, subunit B",+,-1.59882140538318,-
+PA2019,PA2019,Resistance-Nodulation-Cell Division (RND) multidrug efflux membrane fusion protein MexX precursor,-,1.05992419746929,-
+PA2021,PA2021,hypothetical protein,-,3.8279418267329,-
+PA2022,PA2022,probable nucleotide sugar dehydrogenase,+,2.84664522282039,-
+galU,PA2023,UTP--glucose-1-phosphate uridylyltransferase,+,2.36766624216605,-
+PA2024,PA2024,probable ring-cleaving dioxygenase,-,1.14057956449116,-
+PA2030,PA2030,hypothetical protein,-,-1.04341688157248,-
+PA2031,PA2031,hypothetical protein,-,-1.16457271434504,-
+PA2040,PA2040,Glutamylpolyamine synthetase,+,-1.31309095580341,-
+PA2041,PA2041,Amino acid permease,+,-1.80037968163087,-
+PA2045,PA2045,conserved hypothetical protein,-,1.43813791271047,-
+PA2046,PA2046,"hypothetical protein, pseudogene",-,3.22217590863301,yes
+pcoB,PA2064,copper resistance protein B precursor,-,1.25685867612477,-
+PA2066,PA2066,hypothetical protein,-,-1.11676535025015,-
+PA2068,PA2068,probable major facilitator superfamily (MFS) transporter,-,-1.02284966193731,-
+PA2069,PA2069,probable carbamoyl transferase,-,-1.1613061207923,-
+PA2107,PA2107,hypothetical protein,-,3.36595272482534,-
+PA2108,PA2108,probable decarboxylase,+,2.23325945150829,-
+PA2109,PA2109,hypothetical protein,-,-1.01747452693933,-
+opdO,PA2113,pyroglutamate porin OpdO,-,-1.08302069349215,-
+PA2114,PA2114,probable major facilitator superfamily (MFS) transporter,-,-1.03280988924604,-
+PA2116,PA2116,conserved hypothetical protein,+,-1.08267134210787,-
+PA2134,PA2134,hypothetical protein,+,2.59116086221892,-
+PA2135,PA2135,probable transporter,+,1.68344956882025,-
+PA2136,PA2136,hypothetical protein,-,2.44339262335508,-
+PA2137,PA2137,hypothetical protein,+,1.68825960391779,-
+PA2138,PA2138,Multifunctional non-homologous end joining protein LigD,+,2.63535769881996,-
+PA2139,PA2139,"hypothetical protein, pseudogene",+,3.61442726165223,-
+PA2140,PA2140,probable metallothionein,+,3.62419712358386,-
+PA2141,PA2141,hypothetical protein,+,3.70839287255168,-
+PA2142,PA2142,probable short-chain dehydrogenase,+,3.00003858166505,-
+PA2143,PA2143,hypothetical protein,+,3.6051776256826,-
+glgP,PA2144,glycogen phosphorylase,+,3.55216116301892,-
+katE,PA2147,catalase HPII,+,2.90512099175765,-
+PA2148,PA2148,conserved hypothetical protein,+,4.2155236414556,-
+PA2149,PA2149,hypothetical protein,+,4.40150793685886,-
+PA2150,PA2150,conserved hypothetical protein,+,3.94375990097987,-
+PA2151,PA2151,conserved hypothetical protein,+,4.05301454335746,-
+PA2152,PA2152,probable trehalose synthase,+,3.9335757391623,-
+glgB,PA2153,"1,4-alpha-glucan branching enzyme",+,3.81941461536723,-
+PA2154,PA2154,conserved hypothetical protein,-,2.58289993100844,-
+PA2155,PA2155,probable phospholipase,-,2.81082773240802,-
+PA2156,PA2156,conserved hypothetical protein,-,3.5845682027241,-
+PA2157,PA2157,hypothetical protein,-,3.27257194339405,-
+PA2158,PA2158,probable alcohol dehydrogenase (Zn-dependent),-,3.49962447218492,-
+PA2159,PA2159,conserved hypothetical protein,-,3.68547130520934,-
+PA2160,PA2160,probable glycosyl hydrolase,-,3.01172965388064,-
+PA2161,PA2161,hypothetical protein,-,4.51960920800983,-
+PA2162,PA2162,probable glycosyl hydrolase,-,4.00196296234653,-
+PA2163,PA2163,hypothetical protein,-,4.78409855285655,-
+PA2164,PA2164,probable glycosyl hydrolase,-,3.31199935056566,-
+PA2165,PA2165,probable glycogen synthase,-,4.12653648744002,-
+PA2166,PA2166,hypothetical protein,+,2.91221316627202,-
+PA2167,PA2167,hypothetical protein,+,4.65855702385941,-
+PA2168,PA2168,hypothetical protein,+,4.35558475901346,-
+PA2169,PA2169,hypothetical protein,+,3.44196338264043,-
+PA2170,PA2170,hypothetical protein,+,2.81727560504842,-
+PA2171,PA2171,hypothetical protein,+,3.21592248567933,-
+PA2172,PA2172,hypothetical protein,+,3.36246986324117,-
+PA2173,PA2173,hypothetical protein,+,3.65827311639326,-
+PA2173a,PA2173a,–,+,3.40591595717943,-
+PA2175,PA2175,hypothetical protein,-,4.38443263196126,-
+PA2176,PA2176,hypothetical protein,-,4.27329862962967,-
+PA2177,PA2177,probable sensor/response regulator hybrid,+,2.36650788471492,yes
+PA2178,PA2178,hypothetical protein,-,3.39809358268391,-
+PA2179,PA2179,hypothetical protein,-,2.93843251947003,-
+PA2180,PA2180,hypothetical protein,-,3.93374643611262,-
+PA2181,PA2181,hypothetical protein,+,2.6041111619999,-
+PA2183,PA2183,hypothetical protein,-,2.30800545187549,-
+PA2184,PA2184,conserved hypothetical protein,-,3.10876934450255,-
+katN,PA2185,non-heme catalase KatN,+,2.00908775983646,-
+PA2187,PA2187,hypothetical protein,+,3.93489953253932,-
+PA2188,PA2188,probable alcohol dehydrogenase (Zn-dependent),-,1.18732098644794,-
+PA2189,PA2189,hypothetical protein,+,1.57099254422456,-
+PA2190,PA2190,conserved hypothetical protein,+,2.39189985685738,-
+PA2192,PA2192,conserved hypothetical protein,+,3.41221500520553,-
+PA2218,PA2218,hypothetical protein,-,1.35852251150318,-
+pslN,PA2244,hypothetical protein,+,4.71166411660716,-
+bkdZ,PA2250.1,putative sRNA,+,-1.36515723484099,-
+ptxR,PA2258,transcriptional regulator PtxR,-,1.05519859830377,-
+PA2261,PA2261,probable 2-ketogluconate kinase,+,1.62832810073693,-
+PA2264,PA2264,conserved hypothetical protein,+,1.09819228929435,-
+PA2266,PA2266,probable cytochrome c precursor,+,1.13976357691137,-
+pbpC,PA2272,penicillin-binding protein 3A,+,-1.37009104082554,-
+PA2291,PA2291,probable glucose-sensitive porin,-,-1.00788923954898,-
+PA2294,PA2294,probable ATP-binding component of ABC transporter,-,1.01828318644368,-
+PA2362,PA2362,DotU3,-,-1.02130731641686,-
+PA2366,PA2366,HsiC3,+,-1.29518237160306,-
+PA2367,PA2367,Hcp3,+,-1.38346710157191,-
+PA2369,PA2369,HsiG3,+,-1.19323062150149,-
+PA2377,PA2377,hypothetical protein,+,1.31789075802613,-
+PA2404,PA2404,FpvH,+,1.81976142154428,-
+PA2407,PA2407,FpvC,+,1.87385085618149,-
+PA2408,PA2408,FpvD,+,2.81017457258532,-
+PA2411,PA2411,probable thioesterase,-,2.19985814266613,-
+PA2412,PA2412,conserved hypothetical protein,-,2.98088679349447,-
+pvdH,PA2413,"L-2,4-diaminobutyrate:2-ketoglutarate 4-aminotransferase, PvdH",-,2.79141746977111,-
+PA2414,PA2414,L-sorbosone dehydrogenase,-,2.48855191869055,-
+PA2415,PA2415,hypothetical protein,-,2.93242472132014,-
+treA,PA2416,periplasmic trehalase precursor,+,4.27188453665062,-
+PA2417,PA2417,probable transcriptional regulator,-,1.42141105280645,-
+PA2433,PA2433,hypothetical protein,+,3.2490099301819,-
+PA2434,PA2434,hypothetical protein,-,1.24610744985975,-
+PA2435,PA2435,probable cation-transporting P-type ATPase,-,1.80075340957874,-
+glyA2,PA2444,serine hydroxymethyltransferase,-,1.33488547965374,-
+gcvH2,PA2446,glycine cleavage system protein H2,-,1.59117883773081,-
+antC,PA2514,anthranilate dioxygenase reductase,+,1.18107316765991,-
+PA2523,PA2523,CzcR,+,2.09847494437053,-
+PA2524,PA2524,CzcS,+,1.35260017867013,-
+PA2526,PA2526,MuxC,-,1.04730087852927,-
+PA2527,PA2527,MuxB,-,1.07757707385238,-
+PA2536,PA2536,probable phosphatidate cytidylyltransferase,-,-1.4231284664897,-
+PA2549,PA2549,conserved hypothetical protein,+,1.61766642138441,-
+PA2559a,PA2559a,–,+,1.7735565957775,-
+PA2564,PA2564,hypothetical protein,-,-1.019978982735,-
+PA2604,PA2604,conserved hypothetical protein,+,1.07968085625652,-
+PA2651,PA2651,conserved hypothetical protein,-,2.08557264933461,-
+PA2661,PA2661,hypothetical protein,+,-1.08775898307028,-
+PA2704,PA2704,probable transcriptional regulator,-,1.17328344911279,-
+PA2705,PA2705,hypothetical protein,-,1.27407496517413,-
+PA2706,PA2706,hypothetical protein,-,1.26384706319297,-
+PA2707,PA2707,hypothetical protein,-,1.89081989027829,-
+PA2708,PA2708,hypothetical protein,-,3.18157220348975,-
+PA2746a,PA2746a,–,+,1.61625123796696,-
+PA2747,PA2747,hypothetical protein,-,3.02188719684608,-
+PA2751,PA2751,conserved hypothetical protein,+,2.94111884417583,-
+PA2754,PA2754,conserved hypothetical protein,+,2.30435134205936,-
+PA2775.1,PA2775.1,tRNA-Val,-,1.24170547679413,-
+PA2777,PA2777,conserved hypothetical protein,-,3.04295978263275,-
+PA2791,PA2791,hypothetical protein,-,1.45564492258609,-
+PA2798,PA2798,probable two-component response regulator,-,2.06413861529894,yes
+PA2805,PA2805,hypothetical protein,+,1.10647427881436,-
+PA2815,PA2815,probable acyl-CoA dehydrogenase,+,2.19878836703018,-
+PA2816,PA2816,hypothetical protein,+,1.41131560044641,-
+htpX,PA2830,heat shock protein HtpX,+,1.78881564789479,-
+PA2883,PA2883,hypothetical protein,+,2.06234034927191,-
+PA2884,PA2884,hypothetical protein,+,2.55776213537469,-
+PA2894,PA2894,hypothetical protein,-,1.0080423654688,-
+PA2895,PA2895,SbrR,-,2.44307074113201,-
+PA2896,PA2896,SbrI,-,2.54916010531917,-
+PA2915,PA2915,hypothetical protein,-,1.04610734110803,-
+hisP,PA2926,histidine transport protein HisP,+,1.22180968248261,-
+PA2939,PA2939,probable aminopeptidase,+,-1.17023989556312,-
+PA2973,PA2973,probable peptidase,-,-1.05479941802942,-
+PA2985,PA2985,hypothetical protein,+,1.10959403352111,-
+PA2986,PA2986,lipoprotein localization protein LolC,-,1.51305455607944,-
+PA2987,PA2987,lipoprotein localization protein LolD,-,1.53021067542,-
+PA2988,PA2988,lipoprotein localization protein LolE,-,1.38711364730946,-
+psrA,PA3006,transcriptional regulator PsrA,-,1.94882388460048,-
+PA3023,PA3023,conserved hypothetical protein,-,3.03308799808553,-
+PA3031,PA3031,hypothetical protein,+,1.59163209189628,-
+PA3040,PA3040,conserved hypothetical protein,+,2.16206316326708,-
+PA3041,PA3041,hypothetical protein,+,2.3959833340703,-
+PA3042,PA3042,hypothetical protein,+,3.23556345880464,-
+PA3043,PA3043,conserved hypothetical protein,+,1.78207620633485,-
+pelC,PA3062,PelC,-,3.23927914753185,-
+PA3069,PA3069,hypothetical protein,-,1.52609077099556,-
+wzz,PA3160,O-antigen chain length regulator,-,1.44627027325281,-
+PA3177,PA3177,diguanylate cyclase,+,1.11591727161255,-
+PA3188,PA3188,probable permease of ABC sugar transporter,-,-1.93780805580191,-
+gapA,PA3195,glyceraldehyde 3-phosphate dehydrogenase,+,-1.33940431255531,-
+csaA,PA3221,CsaA protein,+,-1.31764560702511,-
+PA3222,PA3222,hypothetical protein,+,-1.04499741550092,-
+PA3231,PA3231,hypothetical protein,-,3.12149312531739,-
+PA3272,PA3272,probable ATP-dependent DNA helicase,-,1.83623961080253,-
+PA3273,PA3273,hypothetical protein,-,3.68299727999454,-
+PA3274,PA3274,hypothetical protein,+,4.16061184089253,-
+phrS,PA3305.1,PhrS,-,9.16052618193266,-
+PA3326,PA3326,ClpP2,-,-1.16763066099681,-
+lecB,PA3361,fucose-binding lectin PA-IIL,+,-1.11082772029992,-
+PA3369,PA3369,hypothetical protein,+,2.28492077946154,-
+PA3370,PA3370,hypothetical protein,+,3.13201183814596,-
+PA3371,PA3371,hypothetical protein,+,2.90700862310496,-
+PA3390,PA3390,hypothetical protein,-,2.41758737164065,-
+PA3403a,PA3403a,–,+,2.48485122126096,-
+hasR,PA3408,Heme uptake outer membrane receptor HasR precursor,-,1.05854404486765,-
+PA3447,PA3447,probable ATP-binding component of ABC transporter,-,2.52662506213403,-
+PA3459,PA3459,probable glutamine amidotransferase,+,3.36251304063418,-
+PA3460,PA3460,probable acetyltransferase,+,3.26695099816193,-
+PA3461,PA3461,conserved hypothetical protein,+,2.71944862497712,-
+PA3516,PA3516,probable lyase,-,1.20755632360794,-
+arnA,PA3554,ArnA,+,1.03034598014367,-
+PA3575,PA3575,hypothetical protein,+,1.236793783804,-
+PA3578,PA3578,conserved hypothetical protein,-,1.44385954326053,-
+PA3586,PA3586,probable hydrolase,-,1.06037800228444,-
+PA3589,PA3589,probable acyl-CoA thiolase,-,1.32335835059453,-
+PA3592,PA3592,conserved hypothetical protein,-,1.33386318781749,-
+PA3597,PA3597,probable amino acid permease,-,1.91517362272262,-
+PA3598,PA3598,conserved hypothetical protein,-,2.33112804469343,-
+rsmZ,PA3621.1,regulatory RNA RsmZ,-,-1.03562596184935,-
+PA3632,PA3632,conserved hypothetical protein,+,-1.01079659842699,-
+PA3669,PA3669,hypothetical protein,-,1.36185247028259,-
+PA3670,PA3670,hypothetical protein,-,1.27119097866928,-
+PA3671,PA3671,probable permease of ABC transporter,-,1.34922243255434,-
+PA3672,PA3672,probable ATP-binding component of ABC transporter,-,1.16169926928676,-
+plsB,PA3673,glycerol-3-phosphate acyltransferase,+,1.35675363999858,-
+PA3677,PA3677,MexJ,-,1.26618657888291,-
+PA3691,PA3691,hypothetical protein,+,3.5830557461079,-
+lptF,PA3692,"Lipotoxon F, LptF",+,3.8811270612358,-
+PA3697,PA3697,hypothetical protein,-,-1.03494377952871,-
+PA3711,PA3711,probable transcriptional regulator,+,1.40631521774513,-
+PA3712,PA3712,hypothetical protein,-,3.20208018538948,-
+PA3714,PA3714,probable two-component response regulator,+,1.21457500167295,-
+PA3733a,PA3733a,–,-,2.00184611675968,-
+PA3762,PA3762,hypothetical protein,-,1.03840539374745,-
+PA3779,PA3779,putative periplasmic substrate binding protein,+,-1.0973269415002,-
+PA3788,PA3788,hypothetical protein,+,2.91611128871554,-
+PA3795,PA3795,probable oxidoreductase,+,2.14835246457076,-
+PA3808,PA3808,conserved hypothetical protein,-,-1.14506850499338,-
+fdx2,PA3809,ferredoxin [2Fe-2S],-,-1.01813377836412,-
+PA3819,PA3819,conserved hypothetical protein,-,1.98973197599347,-
+pcs,PA3857,phosphatidylcholine synthase,-,1.1759436864021,-
+PaiI,PA3865.2,sRNA,+,-2.94204978292153,-
+narK1,PA3877,nitrite extrusion protein 1,-,-2.24150130115878,-
+PA3886a,PA3886a,–,+,3.67558893005984,-
+PA3888,PA3888,"OpuC ABC transporter, permease protein, OpuCD",+,3.832368282781,-
+PA3889,PA3889,"OpuC ABC transporter, periplasmic substrate-binding protein, OpuCC",+,3.67534256607436,-
+PA3890,PA3890,"OpuC ABC transporter, permease protein, OpuCB",+,3.74667208684321,-
+PA3891,PA3891,"OpuC ABC transporter, ATP-binding protein, OpuCA",+,3.98028827287691,-
+PA3902,PA3902,hypothetical protein,-,1.26619442839964,-
+PA3905,PA3905,"type VI effector chaperone for Tox-Rease, TecT",+,-1.20302316013699,-
+PA3906,PA3906,"co-chaperone, co-TecT",+,-1.02922111648689,-
+PA3907,PA3907,"TOX-REase-5 domain-containing effector, TseT",+,-1.25093528191933,-
+PA3928,PA3928,hypothetical protein,-,1.4054248703191,-
+cioB,PA3929,cyanide insensitive terminal oxidase,-,1.31624564745574,yes
+cioA,PA3930,cyanide insensitive terminal oxidase,-,1.0956926575027,yes
+tauD,PA3935,taurine dioxygenase,-,1.51042680040008,-
+PA3952,PA3952,hypothetical protein,-,1.47243718267461,-
+PA3962,PA3962,hypothetical protein,+,2.64567727288033,-
+PA3963,PA3963,probable transporter,+,1.67068137064997,-
+PA3969,PA3969,conserved hypothetical protein,+,1.71303788163731,-
+PA3992,PA3992,SltB3,+,1.47774644068055,-
+PA4016,PA4016,hypothetical protein,+,1.31250292157107,PA4016
+PA4017,PA4017,conserved hypothetical protein,+,1.95324939651721,-
+PA4066,PA4066,hypothetical protein,+,-1.02083433027248,-
+PA4154,PA4154,conserved hypothetical protein,-,2.31159246037053,-
+PA4156,PA4156,FvbA,-,1.00058907250499,-
+PA4170,PA4170,hypothetical protein,+,1.30490453421093,-
+PA4171,PA4171,probable protease,+,2.56950163739239,-
+PA4172,PA4172,probable nuclease,+,2.41649412337526,-
+ppgL,PA4204,"periplasmic gluconolactonase, PpgL",+,2.37364999820243,-
+pchG,PA4224,pyochelin biosynthetic protein PchG,-,1.49432479405955,-
+pchE,PA4226,dihydroaeruginoic acid synthetase,-,1.66137625010084,-
+tadG,PA4297,TadG,-,-1.30105686793055,-
+PA4298,PA4298,hypothetical protein,-,-1.00397582750162,-
+flp,PA4306,"Type IVb pilin, Flp",+,-1.51160499649296,-
+PA4311,PA4311,conserved hypothetical protein,+,2.39178351804318,-
+PA4312,PA4312,conserved hypothetical protein,+,2.3422971251432,-
+PA4313,PA4313,hypothetical protein,+,1.60480244313013,-
+PA4321,PA4321,hypothetical protein,+,-1.01449474283414,-
+PA4337,PA4337,hypothetical protein,-,1.30294545187367,-
+PA4338,PA4338,hypothetical protein,-,1.62425662265144,-
+PA4343,PA4343,probable major facilitator superfamily (MFS) transporter,-,1.82243783219334,-
+PA4344,PA4344,probable hydrolase,-,3.16400577206886,-
+PA4345,PA4345,hypothetical protein,-,3.13150156711066,-
+PA4346,PA4346,hypothetical protein,-,1.58157013200201,-
+icmP,PA4370,Insulin-cleaving metalloproteinase outer membrane protein precursor,+,-1.43623739616651,-
+PA4387,PA4387,conserved hypothetical protein,-,1.78645947612099,-
+PA4390,PA4390,hypothetical protein,-,1.71918444265852,-
+PA4394,PA4394,conserved hypothetical protein,-,2.33489339418956,-
+PA4497,PA4497,probable binding protein component of ABC transporter,+,-1.17937471181987,-
+PA4504,PA4504,dipeptide ABC transporter permease DppC,+,1.09148029004374,-
+PA4505,PA4505,dipeptide ABC transporter ATP-binding protein DppD,+,1.41870475969031,-
+PA4506,PA4506,dipeptide ABC transporter ATP-binding protein DppF,+,1.39806212361294,-
+PA4532,PA4532,hypothetical protein,-,1.22031616342787,-
+PA4533,PA4533,hypothetical protein,-,1.7994154385815,-
+fimT,PA4549,type 4 fimbrial biogenesis protein FimT,+,1.80625066955746,-
+PA4574,PA4574,conserved hypothetical protein,-,1.19628269899707,-
+PA4575,PA4575,hypothetical protein,-,1.4214240036076,-
+PA4611,PA4611,hypothetical protein,-,-1.24550946152822,-
+PA4634,PA4634,hypothetical protein,-,1.06263093564571,-
+hemH,PA4655,ferrochelatase,-,1.29241082864822,-
+PA4656,PA4656,conserved hypothetical protein,-,1.60633354523845,-
+pagL,PA4661,Lipid A 3-O-deacylase,-,1.24285837668822,-
+hitA,PA4687,ferric iron-binding periplasmic protein HitA,+,-1.07579225749363,-
+hitB,PA4688,iron (III)-transport system permease HitB,+,-1.4507273496719,-
+PA4702,PA4702,hypothetical protein,+,1.18079450478416,-
+prrF1,PA4704.1,regulatory RNA PrrF1,+,-1.33269714230965,-
+prrH,PA4704.3,sRNA,+,-1.30749761505994,-
+phuR,PA4710,Heme/Hemoglobin uptake outer membrane receptor PhuR precursor,+,1.3840403557013,-
+PA4714,PA4714,conserved hypothetical protein,+,1.87331850428075,-
+PA4738,PA4738,conserved hypothetical protein,-,3.16042622749906,-
+PA4739,PA4739,conserved hypothetical protein,-,3.40583504006573,-
+ftsH,PA4751,cell division protein FtsH,-,1.04784690240337,yes
+PA4785,PA4785,probable acyl-CoA thiolase,-,1.92121879264918,-
+PA4786,PA4786,probable short-chain dehydrogenase,+,3.45479436514405,-
+PA4788,PA4788,hypothetical protein,+,2.45589858341368,-
+PA4800,PA4800,hypothetical protein,-,-1.18077733499276,-
+lipC,PA4813,lipase LipC,-,1.39767311255222,-
+PA4822,PA4822,hypothetical protein,-,1.25873762648075,-
+PA4833,PA4833,conserved hypothetical protein,+,1.00864791610924,-
+PA4841,PA4841,conserved hypothetical protein,-,1.51460983882482,-
+osmE,PA4876,osmotically inducible lipoprotein OsmE,+,3.21739671750567,-
+PA4877,PA4877,hypothetical protein,-,4.01317220506258,-
+PA4879,PA4879,conserved hypothetical protein,-,2.67319373894874,-
+PA4880,PA4880,probable bacterioferritin,+,3.49014435505087,-
+ureE,PA4891,urease accessory protein UreE,+,-1.522703863531,-
+PA5020,PA5020,probable acyl-CoA dehydrogenase,+,1.0561087861043,-
+hslV,PA5053,heat shock protein HslV,+,1.6383875440403,-
+hslU,PA5054,heat shock protein HslU,+,1.12923440767109,-
+opgH,PA5077,Osmoregulated periplasmic glucan biosynthesis,-,1.71766976407467,-
+opgG,PA5078,Osmoregulated periplasmic glucan biosynthesis,-,1.82093750023566,-
+PA5109,PA5109,hypothetical protein,-,1.65529434144651,-
+fbp,PA5110,"fructose-1,6-bisphosphatase",-,1.72137443241212,-
+gloA3,PA5111,lactoylglutathione lyase,-,2.80848888778098,-
+ntrC-3',PA5125.01,putative sRNA,+,-1.28616847158281,-
+pgm,PA5131,phosphoglycerate mutase,+,2.30728219831499,-
+PA5159,PA5159,multidrug resistance protein,+,-2.06127076046638,-
+PA5160,PA5160,drug efflux transporter,+,-1.55113675356441,-
+PA5182,PA5182,hypothetical protein,+,1.45227763546996,-
+amgR,PA5200,AmgR,-,1.84914052843086,-
+PA5202,PA5202,hypothetical protein,+,1.40275418739687,-
+PA5209,PA5209,hypothetical protein,+,2.74117582306072,-
+PA5212,PA5212,hypothetical protein,+,3.35167939026497,-
+PA5220,PA5220,hypothetical protein,+,-1.24722596843573,-
+PA5245,PA5245,conserved hypothetical protein,+,1.9841180650018,-
+PA5246,PA5246,conserved hypothetical protein,+,1.59663559850586,-
+PA5248,PA5248,hypothetical protein,-,-1.02688702916265,-
+dsbH,PA5256,disulfide bond formation protein,-,1.00851019275112,yes
+PA5257,PA5257,hypothetical protein,-,1.39768838146262,-
+PA5258,PA5258,hypothetical protein,-,1.95962565918067,-
+hemD,PA5259,uroporphyrinogen-III synthetase,-,1.1815587937276,-
+algR,PA5261,alginate biosynthesis regulatory protein AlgR,-,1.12601762672848,-
+algZ,PA5262,FimS,-,1.08945336700508,-
+PA5290,PA5290,conserved hypothetical protein,+,1.24825385353904,yes
+PA5291,PA5291,BetT2,+,2.10506180727481,-
+poxB,PA5297,pyruvate dehydrogenase (cytochrome),+,3.1578378550898,-
+PA5299,PA5299,hypothetical protein,-,2.13977676343129,-
+PA5312,PA5312,Aldehyde dehydrogenase,-,-1.14912024872218,-
+PA5314,PA5314,hypothetical protein,+,-1.37533339700761,-
+PA5352,PA5352,conserved hypothetical protein,-,-1.00577598676407,-
+PA5381,PA5381,hypothetical protein,-,1.30144126823855,-
+PA5424,PA5424,conserved hypothetical protein,-,1.5080685696931,-
+aspA,PA5429,aspartate ammonia-lyase,+,-1.53471083586822,-
+aspA-3',PA5429.1,putative sRNA,+,-1.48067476887537,-
+PA5463,PA5463,hypothetical protein,+,1.94205764696582,-
+PA5464,PA5464,hypothetical protein,+,1.51870999185002,-
+PA5473,PA5473,conserved hypothetical protein,+,2.15968799972663,-
+PA5481,PA5481,hypothetical protein,-,3.58455131947952,-
+PA5482,PA5482,hypothetical protein,-,4.47856731113033,-
+algB,PA5483,two-component response regulator AlgB,+,2.8756572890626,-
+PA5485,PA5485,AmpDh2,-,2.44672768578852,-
+ErsA,PA5492.1,sRNA,-,1.00231510507498,yes
+PA5514,PA5514,probable beta-lactamase,+,1.13626020797641,-
+PA5517,PA5517,conserved hypothetical protein,-,1.06841163438056,-
+PA5518,PA5518,probable potassium efflux transporter,-,1.01296785585576,-
+PA5526,PA5526,hypothetical protein,-,1.28252766954257,-
+PA5528,PA5528,hypothetical protein,-,1.37593348577291,-
+amiA,PA5538,N-acetylmuramoyl-L-alanine amidase,-,1.65140782192417,-
+PA5566,PA5566,hypothetical protein,-,1.93701170780037,-
+P6,-,sRNA,-,1.93702590511085,-
+Pant101,Pant101,putative sRNA,-,2.50590008670665,-
+Pant182,Pant182,putative sRNA,+,-4.78783840534375,-
+Pant192,Pant192,putative sRNA,+,-1.75466819074694,-
+Pant211,Pant211,putative sRNA,-,-1.17204616438767,-
+Pant269,Pant269,putative sRNA,-,1.50961093419671,-
+Pant270,Pant270,putative sRNA,-,2.24515296650074,-
+Pant277,Pant277,putative sRNA,-,-1.00748853243672,-
+Pant279,Pant279,putative sRNA,-,1.54994590349831,-
+Pant301,Pant301,putative sRNA,-,2.60703873646884,-
+Pant314,Pant314,putative sRNA,+,-1.16977615500024,yes
+Pant344,Pant344,putative sRNA,+,3.63079218531135,-
+Pant359,Pant359,putative sRNA,+,3.48764680167897,-
+Pant365,Pant365,putative sRNA,-,1.49609800680952,-
+Pant404,Pant404,putative sRNA,+,1.18959062830008,-
+Pant443,Pant443,putative sRNA,-,2.98226071702592,-
+Pant445/Spa93,Pant445/Spa93,putative sRNA,-,1.10771912198591,-
+Pant447,Pant447,putative sRNA,+,1.30904916651441,-
+Pant465,Pant465,putative sRNA,-,2.01790998892891,-
+Pant470/Sr148,Pant470/Sr148,putative sRNA,+,2.77041917380767,-
+Pant480,Pant480,putative sRNA,-,1.54866477383967,-
+Pant49,Pant49,putative sRNA,-,1.05565927602498,-
+Pant503/Spa110,Pant503/Spa110,putative sRNA,+,1.93739339304156,-
+Pant509,Pant509,putative sRNA,-,1.63150490386242,-
+Pant53,Pant53,putative sRNA,+,1.17865296681628,-
+Pant59,Pant59,putative sRNA,+,1.5634360522385,-
+Pant60,Pant60,putative sRNA,+,1.54224922143611,-
+Pant81,Pant81,putative sRNA,+,2.4937085285275,-
+Pant87,Pant87,putative sRNA,+,1.07314637610509,yes
+Spa032,Spa032,putative sRNA,-,1.36643328900884,-
+Spa055,Spa055,putative sRNA,+,-1.7838445111942,-
+Spa068,Spa068,putative sRNA,-,-1.02417495613976,-
+Spa096,Spa096,putative sRNA,-,3.28985454217022,-
+Spa125,Spa125,putative sRNA,-,2.40796172263985,-
+Spa141,Spa141,putative sRNA,+,1.39434607451369,-
+Spa150,Spa150,putative sRNA,+,2.18858480800722,-
+Spa172,Spa172,putative sRNA,+,3.70601926228099,-
+Spa176,Spa176,putative sRNA,+,2.71210155656879,-
+Spa177,Spa177,putative sRNA,-,1.35544363939581,-
+Spa179,Spa179,putative sRNA,-,1.65261588547888,-
+Spa184,Spa184,putative sRNA,-,-1.243974606139,-
+Sr020,Sr020,putative sRNA,+,-1.4269035037264,-
+Sr034,Sr034,putative sRNA,-,1.95410638172344,-
+Sr058/Spa81,Sr058/Spa81,putative sRNA,-,1.27140654772686,-
+Sr080,Sr080,putative sRNA,+,2.87431983142991,-
+Sr089,Sr089,putative sRNA,+,1.01944747647432,-
+Sr114,Sr114,putative sRNA,+,3.27648999426561,-
+Sr126,Sr126,putative sRNA,-,1.03509406387111,-

@@ -148,6 +148,82 @@ GROUP BY seq_id HAVING COUNT(DISTINCT rna_id) > 1;
 SELECT * FROM qc_issue WHERE source_line = '24213';
 ```
 
+## Fuentes incorporadas
+
+Las cifras de las tablas anteriores corresponden a la base generada por
+`build_db.py`. Las fuentes que se describen a continuación se agregan después,
+mediante un cargador propio que puede volver a correrse.
+
+### Gebhardt et al. 2023
+
+*Hfq-licensed RNA–RNA interactome in* Pseudomonas aeruginosa *reveals a keystone
+sRNA*. PNAS 120:e2218407120 (PMID 37285605, `PUB-0113`). Los datos son RIL-seq con
+Hfq en PAO1 (`GEN-0003`), en fase exponencial (OD600 ≈ 0,5) y estacionaria
+(OD600 ≈ 2,0).
+
+```powershell
+python scripts\load_gebhardt2023.py
+```
+
+**Fuentes.** Están en `db/fuentes/gebhardt2023/`: un CSV por hoja de los Datasets
+S1 y S2, generados con `scripts\xlsx_a_csv.py`. Se conservan sólo las hojas que el
+cargador usa, además de la leyenda y la descripción de cada dataset; las hojas
+*Self S-Chimeras*, que no se cargan, quedan fuera. Los .xlsx originales no se
+versionan, pero la conversión puede repetirse con
+`python scripts\xlsx_a_csv.py <carpeta con los xlsx>`.
+
+**Bitácora.** Cada carga genera dos archivos:
+
+- `db/cambios_gebhardt2023.md`: registro legible con las filas por tabla antes y
+  después, los registros existentes modificados (valor anterior y nuevo), las
+  interacciones que coinciden con estudios previos, los sRNA incorporados, el
+  detalle de los 35 blancos del pulso, las validaciones y cada entrada de
+  `qc_issue`.
+- `db/cambios_gebhardt2023.csv`: una línea por cada fila insertada o modificada
+  (`tabla, id, operacion, campo, valor_anterior, valor_nuevo, origen`), donde
+  `origen` remite a la fila de la fuente (`S1_exp #13`, `S2 PA0462`, `texto PA2009`).
+
+| Origen | Qué se carga | Evidencias |
+|---|---|---:|
+| Dataset S1, S-chimeras (exp. / estac.) | Una `interaction_evidence` por quimera con al menos un sRNA, con técnica `RIL-seq with Hfq`. Cada una tiene un `study` (RIL-Seq, Hfq, fase), cuyo campo `comments` guarda el número de fila, los fragmentos quiméricos, el *odds ratio* y el p de Fisher. Se agregan además dos `binding_site` con la región genómica que cubren las lecturas de cada ARN | 937 / 509 |
+| Dataset S2, pulso de PhrS (RNA-seq) | Sólo los 35 genes marcados como blanco directo de PhrS por RIL-seq. El `study` usa el método RNA-Sequencing, con regulación según el signo del log2FC; `comments` guarda el log2FC, el padj, el log2FC con PhrS-Δseed y si ese cambio es significativo | 35 |
+| Texto, Fig. 2 y 4 | Validaciones de PhrS → hmgA, PA3340 y antR (represión en el 5'UTR): fusiones traduccionales, mutagénesis dirigida, mutaciones compensatorias, qRT-PCR y western blot | 3 |
+
+Criterios adoptados:
+
+- **Qué no se carga.** No se cargan las hojas *Self S-Chimeras*, que son
+  fragmentos de un único transcripto. Tampoco las 253 quimeras sin sRNA
+  (mRNA–mRNA, tRNA–mRNA, etc.) ni las tablas DESeq2 completas, que son datos de
+  expresión y no de interacción; estas últimas quedan disponibles en CSV.
+- **Cuál es el regulador.** Es sRNA el ARN de clase `sRNA` o el que la columna
+  *novel sRNA* señala como sRNA nuevo. Cuando ambos lo son (123 casos), se toma
+  RNA2 como regulador, según la convención de RIL-seq.
+- **Identidad de las moléculas.** Se sigue el criterio de `build_db.py`: primero
+  el locus (`PA3305.1`) y, si no lo hay, el nombre. La comparación por nombre
+  ignora mayúsculas y ceros a la izquierda (`Sr063` = `Sr63`), y los alias
+  separados por `/` pasan a `rna_synonym`. Los blancos informados como UTR
+  (`PA2770_5'`) se asignan al mRNA del gen. Los transcriptos antisentido e
+  intergénicos se registran como moléculas propias (`biotype` `antisense` /
+  `intergenic`).
+- **Región del mRNA.** `region_involved_mrna` sólo se completa cuando la clase la
+  indica (`5-utr`, `3-utr`). La clase `mRNA` de RIL-seq no distingue CDS de UTR:
+  hmgA y antR figuran como `mRNA`, pero PhrS se aparea en su 5'UTR.
+- **Coordenadas de `binding_site`.** Delimitan las lecturas quiméricas, no el
+  apareamiento exacto: desde la primera base de la primera lectura hasta la
+  primera o la última de la última, según la leyenda del dataset. Por eso
+  `seq_id` queda nulo.
+- **Anomalías de la fuente.** Tres genes codificantes rotulados `sRNA` (ahpB,
+  hsiB3, PA5446) se tratan como mRNA. Sr0161 figura con el locus del CDS vecino
+  (`PA0161`), por lo que se identifica por nombre. Se completó el `ncbi_id` de
+  RhlS, ErsA y ReaL, que figuraban sin él. En la tabla DESeq2 de PhrS-Δseed,
+  los p-valores repiten los de PhrS en casi todos los genes, un error de copia
+  del archivo suplementario. Por eso la significancia con Δseed se toma de la
+  hoja de significativos de los autores. Todos estos casos constan en
+  `qc_issue` con `source_line LIKE 'Gebhardt2023%'`.
+- **Rol de los sRNA.** `is_srna` indica que la molécula actúa como regulador,
+  igual que en `build_db.py`. Los 36 sRNA nuevos que sólo aparecen como blanco de
+  otro sRNA tienen `biotype = 'sRNA'` pero `is_srna = 0`.
+
 ## Correcciones aplicadas
 
 El detalle completo consta en `reporte_inconsistencias.md`. Las principales

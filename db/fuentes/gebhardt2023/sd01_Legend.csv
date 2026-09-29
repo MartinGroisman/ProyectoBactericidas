@@ -1,0 +1,28 @@
+texto
+Dataset S1: List of S-Chimeras from Exp. Phase and Stat. Phase RIL-seq libraries with greather than 32 (Exp. Phase) and 27 (Stat. Phase)
+Notes:
+1. rRNA are excluded from the tables
+2. RNA1/RNA2  refers to the first/second RNA in the chimeric fragments
+"3. S-chimeras that appear to arise from a single transcript are listed in the pages labelled ""Self S-Chimeras""."
+Number: S-chimera rank in terms of total chimeric fragments/interactions detected
+RNA1 name: based on the genomic location RNA1 was mapped to
+RNA2 name: based on the genomic location RNA2 was mapped to
+RNA1 chromosome: Chromosome the RNA1 was mapped to.
+RNA1 from: The coordinate where the first nucleotide of the first (most 5’) read corresponding to RNA1 was mapped to.
+RNA1 to: The coordinate where the first nucleotide of the last (most 3’) read corresponding to RNA1 was mapped to.
+RNA1 Strand: The strand RNA1 was mapped to.
+RNA1 Gene: locus tag based on genomic location of RNA1.
+RNA2 chromosome: Chromosome RNA2 is mapped to.
+RNA2 from: The coordinate where the last nucleotide of the first (most 5’) read corresponding to RNA2 was mapped to.
+RNA2 to: The coordinate where the last nucleotide of the last (most 3’) read corresponding to RNA2 was mapped to.
+RNA2 Strand: The strand RNA2 was mapped to.
+RNA2 Gene: locus tag based on genomic location of RNA2.
+Number of  interactions:   Number off chimeras supporting the interaction.
+"Other Interactions of RNA1: Number of other fragments in which RNA1 appears as first, including single fragments."
+"Other interactions of RNA2: Number of other sequenced fragments in which the second RNA appears as second, including single fragments."
+Total other interactions: Number of sequenced fragments in the experiment excluding the above.
+"Odds Ratio: (K/L)/(M/N), where K= Number of interactions , L=other interactions of RNA2, M=other interactions of RNA1, N=total other interactions."
+Fisher's exact test p-value: p-value for observing at least this number of chimeric fragments given their background frequencies on Hfq. The Odds Ratio provides the effect size of the test.
+"annotation class RNA1: transcript type (i.e., mRNA, sRNA, tRNA, etc.) for RNA1"
+"annotation class RNA1: transcript type (i.e., mRNA, sRNA, tRNA, etc.) for RNA2"
+"novel sRNA: Indicates if the RNAs (i.e., RNA1 or RNA2) is a putative novel sRNAs identified herein."
