@@ -13,6 +13,9 @@ documentadas.
 | `scripts/schema.sql` | Definición del esquema relacional (DDL) |
 | `scripts/xlsx_a_csv.py` | Conversión de planillas suplementarias (.xlsx) a CSV |
 | `scripts/load_gebhardt2023.py` | Incorporación de Gebhardt et al. 2023 (RIL-seq, *P. aeruginosa* PAO1) |
+| `scripts/exportar_exclusion.py` | Lista de exclusión: publicaciones, pares y alias ya cargados, para buscar fuentes nuevas |
+| `scripts/buscar_candidatos.py` | Búsqueda en PubMed y Europe PMC de trabajos candidatos (`db/candidatos/`) |
+| `docs/hoja_de_ruta_nuevas_interacciones.md` | Plan para incorporar interacciones publicadas desde 2022 |
 | `db/README.md` | **Documentación completa del modelo de datos** |
 | `db/reporte_inconsistencias.md` | Síntesis de las correcciones aplicadas |
 
@@ -35,6 +38,8 @@ identificadores.
 
 ```powershell
 python scripts\load_gebhardt2023.py            # agrega Gebhardt et al. 2023 a la base
+python scripts\exportar_exclusion.py           # regenera db/exclusion/ tras cada carga
+python scripts\buscar_candidatos.py            # agrega candidatos nuevos a db/candidatos/
 ```
 
 El cargador lee las fuentes versionadas en `db/fuentes/gebhardt2023/`, que son los
