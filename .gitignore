@@ -30,6 +30,10 @@ db/*.db
 db/csv/
 # copia de scripts/schema.sql que emite el script; la fuente es la de scripts/
 db/schema.sql
+# lista de exclusion (scripts/exportar_exclusion.py): pares y alias pesan ~14 MB
+# y se regeneran; se versiona solo el listado de publicaciones
+db/exclusion/*
+!db/exclusion/publicaciones.csv
 
 # Se versionan explicitamente (contrapeso de las reglas anteriores):
 !db/README.md
