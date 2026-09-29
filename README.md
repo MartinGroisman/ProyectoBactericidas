@@ -11,6 +11,8 @@ documentadas.
 |---|---|
 | `scripts/build_db.py` | Proceso de extracción, depuración y carga (ETL) |
 | `scripts/schema.sql` | Definición del esquema relacional (DDL) |
+| `scripts/xlsx_a_csv.py` | Conversión de planillas suplementarias (.xlsx) a CSV |
+| `scripts/load_gebhardt2023.py` | Incorporación de Gebhardt et al. 2023 (RIL-seq, *P. aeruginosa* PAO1) |
 | `db/README.md` | **Documentación completa del modelo de datos** |
 | `db/reporte_inconsistencias.md` | Síntesis de las correcciones aplicadas |
 
@@ -28,6 +30,19 @@ La ejecución genera `db/bactericidas.sqlite`, las tablas exportadas en `db/csv/
 una copia del esquema y el reporte de inconsistencias. El procedimiento es
 determinístico: ante los mismos datos de entrada produce los mismos
 identificadores.
+
+### Fuentes incorporadas después de la normalización
+
+```powershell
+python scripts\load_gebhardt2023.py            # agrega Gebhardt et al. 2023 a la base
+```
+
+El cargador lee las fuentes versionadas en `db/fuentes/gebhardt2023/`, que son los
+Datasets S1 y S2 del artículo convertidos a CSV con `scripts\xlsx_a_csv.py`. Cada
+carga deja una bitácora de cambios en `db/cambios_gebhardt2023.md` y
+`db/cambios_gebhardt2023.csv`. `build_db.py` reconstruye la base desde cero, así que
+el cargador se debe volver a correr después de él. El criterio de carga se
+describe en [`db/README.md`](db/README.md#gebhardt-et-al-2023).
 
 > **Datos de origen.** El archivo `Full_data_set_en uso.csv` (≈82 MB) no se
 > encuentra versionado, por exceder el tamaño recomendado para un repositorio

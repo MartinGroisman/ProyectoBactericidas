@@ -5,7 +5,8 @@
 # reporte) y se excluye todo lo que el script regenera o lo que excede el
 # tamano razonable de un repositorio publico.
 #
-# Toda la carpeta db/ se reconstruye con:  python scripts/build_db.py
+# La base y db/csv/ se reconstruyen con:  python scripts/build_db.py
+# seguido de los cargadores de fuentes adicionales (scripts/load_*.py).
 # ---------------------------------------------------------------------------
 
 # --- Datos de origen -------------------------------------------------------
@@ -17,6 +18,9 @@ Full_data_set*.csv
 *.xlsx
 *.xls
 ~$*.xls*
+# carpeta de trabajo con el PDF y los xlsx suplementarios de Gebhardt et al. 2023;
+# los CSV que usa la carga estan versionados en db/fuentes/gebhardt2023/
+prueba_gebhardt/
 
 # --- Salidas generadas -----------------------------------------------------
 # La base completa (~72 MB) y las tablas exportadas (~29 MB) son reproducibles.
@@ -30,6 +34,10 @@ db/schema.sql
 # Se versionan explicitamente (contrapeso de las reglas anteriores):
 !db/README.md
 !db/reporte_inconsistencias.md
+# fuentes de las cargas adicionales (CSV livianos) y sus bitacoras de cambios
+!db/fuentes/
+!db/cambios_*.md
+!db/cambios_*.csv
 
 # --- Python ----------------------------------------------------------------
 __pycache__/
