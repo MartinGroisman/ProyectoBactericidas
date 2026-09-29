@@ -16,6 +16,7 @@ documentadas.
 | `scripts/exportar_exclusion.py` | Lista de exclusión: publicaciones, pares y alias ya cargados, para buscar fuentes nuevas |
 | `scripts/buscar_candidatos.py` | Búsqueda en PubMed y Europe PMC de trabajos candidatos (`db/candidatos/`) |
 | `docs/hoja_de_ruta_nuevas_interacciones.md` | Plan para incorporar interacciones publicadas desde 2022 |
+| `tests/` | Pruebas: cadena completa de punta a punta y reintentos de red |
 | `db/README.md` | **Documentación completa del modelo de datos** |
 | `db/reporte_inconsistencias.md` | Síntesis de las correcciones aplicadas |
 
@@ -52,6 +53,20 @@ describe en [`db/README.md`](db/README.md#gebhardt-et-al-2023).
 > **Datos de origen.** El archivo `Full_data_set_en uso.csv` (≈82 MB) no se
 > encuentra versionado, por exceder el tamaño recomendado para un repositorio
 > público. Debe situarse en la raíz del proyecto antes de ejecutar el script.
+
+### Pruebas
+
+```powershell
+python tests\test_e2e_ciclo.py      # cadena completa en una copia limpia (~10 min, requiere red)
+python tests\test_reintento.py      # reintentos ante respuestas truncadas (servidor local)
+```
+
+`test_e2e_ciclo.py` copia el repositorio a un directorio temporal, sin tocar la
+base ni los CSV del árbol de trabajo. Ahí corre la cadena completa, comprueba
+que los archivos versionados se regeneren idénticos y recorre un ciclo real de
+búsqueda, cribado manual, carga y nueva búsqueda. Necesita el CSV de origen en
+la raíz. Ambas pruebas usan sólo la biblioteca estándar y también corren con
+`pytest`.
 
 ## El modelo en síntesis
 
