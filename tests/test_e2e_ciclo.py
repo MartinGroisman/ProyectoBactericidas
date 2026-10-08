@@ -10,8 +10,10 @@ Requiere "Full_data_set_en uso.csv" en la raiz y acceso a PubMed y Europe PMC.
 Tarda unos 10 minutos.
 
   1. build_db -> load_gebhardt2023 -> exportar_exclusion: los archivos
-     versionados que se regeneran (reporte, bitacora de Gebhardt,
-     publicaciones.csv) tienen que salir identicos a los del repositorio.
+     versionados que se regeneran (tablas de db/csv, reporte, bitacora de
+     Gebhardt, publicaciones.csv) tienen que salir identicos a los del
+     repositorio, y cada CSV de db/csv tiene que coincidir con su tabla de la
+     base: mismo nombre, mismas columnas en el mismo orden y mismas filas.
   A. Base sin Gebhardt (solo build_db), exclusion y busqueda desde cero:
      Gebhardt 2023 aparece como candidato de prioridad 1.
   B. Cribado manual: decisiones sobre dos filas y una fila agregada a mano
@@ -21,7 +23,7 @@ Tarda unos 10 minutos.
      duplicadas y la bitacora acumula las dos corridas.
 """
 from __future__ import annotations
-import csv, os, re, shutil, subprocess, sys, tempfile
+import csv, os, re, shutil, sqlite3, subprocess, sys, tempfile
 
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CRUDO = "Full_data_set_en uso.csv"
@@ -32,6 +34,7 @@ MANUAL = "MANUAL:regulondb-001"
 NO_COPIAR = ("db/exclusion/", "db/candidatos/", "tests/")
 VERSIONADOS = ["db/reporte_inconsistencias.md", "db/cambios_gebhardt2023.md",
                "db/cambios_gebhardt2023.csv", "db/exclusion/publicaciones.csv"]
+csv.field_size_limit(10 ** 7)
 
 fallas = []
 
@@ -74,6 +77,29 @@ def leer(cand):
         return list(csv.DictReader(fh))
 
 
+def csv_vs_sqlite(copia):
+    """Cada tabla de la base tiene su CSV en db/csv, con las mismas columnas y filas."""
+    con = sqlite3.connect(os.path.join(copia, "db", "bactericidas.sqlite"))
+    tablas = [r[0] for r in con.execute("SELECT name FROM sqlite_master WHERE type = 'table' "
+                                        "AND name NOT LIKE 'sqlite_%' ORDER BY name")]
+    csvdir = os.path.join(copia, "db", "csv")
+    archivos = sorted(f[:-4] for f in os.listdir(csvdir) if f.endswith(".csv"))
+    check(archivos == tablas, "db/csv tiene un CSV por tabla y ninguno de mas")
+    for t in sorted(set(tablas) & set(archivos)):
+        cols = [r[1] for r in con.execute("PRAGMA table_info(%s)" % t)]
+        filas = con.execute("SELECT COUNT(*) FROM %s" % t).fetchone()[0]
+        with open(os.path.join(csvdir, t + ".csv"), encoding="utf-8", newline="") as fh:
+            rd = csv.reader(fh)
+            hdr = next(rd)
+            n = sum(1 for _ in rd)
+        check(hdr == cols and n == filas,
+              "db/csv/%s.csv coincide con la tabla (%d columnas, %d filas)" % (t, len(cols), filas)
+              if hdr == cols and n == filas else
+              "db/csv/%s.csv: columnas %s, %d filas; tabla: %s, %d filas"
+              % (t, hdr, n, cols, filas))
+    con.close()
+
+
 def resumen(out):
     return "\n".join("     " + l for l in out.strip().splitlines()
                      if l.startswith(("Ya en", "Candidatos", "  prioridad", "Consultas con")))
@@ -92,7 +118,9 @@ def main():
         print("1. cadena de carga completa y determinismo")
         for s in ("build_db.py", "load_gebhardt2023.py", "exportar_exclusion.py"):
             correr(copia, s)
-        for f in VERSIONADOS:
+        csv_vs_sqlite(copia)
+        tablas = sorted("db/csv/" + f for f in os.listdir(os.path.join(REPO, "db", "csv")))
+        for f in tablas + VERSIONADOS:
             check(mismo_texto(os.path.join(copia, f), os.path.join(REPO, f)),
                   "%s identico al del repositorio" % f)
 

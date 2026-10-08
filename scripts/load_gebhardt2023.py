@@ -721,11 +721,8 @@ con.commit()
 # reexporta las tablas modificadas para que db/csv siga en sincronia con la base
 for t in ("publication", "genome_publication", "rna", "rna_synonym", "interaction",
           "interaction_evidence", "binding_site", "study", "qc_issue"):
-    cur = con.execute("SELECT * FROM %s" % t)
+    cur = con.execute("SELECT * FROM %s" % t)   # qc_issue: issue_id es el rowid
     cols = [d[0] for d in cur.description]
-    if t == "qc_issue":     # mismo formato que escribe build_db.py
-        cols = ["source_line", "column_name", "issue_type", "original_value", "action", "n_casos"]
-        cur = con.execute("SELECT %s FROM qc_issue ORDER BY issue_id" % ",".join(cols))
     with open(os.path.join(CSVDIR, t + ".csv"), "w", newline="", encoding="utf-8") as fh:
         w = csv.writer(fh)
         w.writerow(cols)

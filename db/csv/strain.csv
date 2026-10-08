@@ -1,0 +1,73 @@
+strain_id,strain_name,strain_taxid,species_taxid,gram_type
+STR-0001,Escherichia coli O157:H7 str. Sakai,386585,562,Gram-negative
+STR-0002,Escherichia coli str. K-12 substr. MG1655,511145,562,Gram-negative
+STR-0003,Pseudomonas aeruginosa PAO1,208964,287,Gram-negative
+STR-0004,Bacillus subtilis subsp. subtilis str. 168,224308,1423,Gram-positive
+STR-0005,Vibrio cholerae C6706,948564,666,Gram-negative
+STR-0006,Pseudomonas aeruginosa PA14,652611,287,Gram-negative
+STR-0007,Pseudomonas aeruginosa AZPAE15042,,287,Gram-negative
+STR-0008,Staphylococcus aureus HG001,,1280,Gram-positive
+STR-0009,Salmonella enterica subsp. enterica serovar Typhimurium str. SL1344,216597,28901,Gram-negative
+STR-0010,Escherichia coli O157:H7 str. EDL933,155864,562,Gram-negative
+STR-0011,Escherichia coli O127:H6 str. E2348/69,574521,562,Gram-negative
+STR-0012,Staphylococcus aureus subsp. aureus str. Newman,426430,1280,Gram-positive
+STR-0013,Neisseria gonorrhoeae FA 1090,242231,485,Gram-negative
+STR-0014,Listeria monocytogenes LO28,393132,1639,Gram-positive
+STR-0015,Staphylococcus aureus subsp. aureus NCTC 8325,93061,1280,Gram-positive
+STR-0016,Helicobacter pylori G27,563041,210,Gram-negative
+STR-0017,Helicobacter pylori 26695,85962,210,Gram-negative
+STR-0018,Vibrio alginolyticus EPGS,,663,Gram-negative
+STR-0019,Vibrio cholerae El Tor Inaba strain A1552,,666,Gram-negative
+STR-0020,Sinorhizobium meliloti 2011,1286640,382,Gram-negative
+STR-0021,Yersinia pseudotuberculosis YPIII,502800,633,Gram-negative
+STR-0022,Neisseria gonorrhoeae MS11,528354,485,Gram-negative
+STR-0023,Streptomyces coelicolor A3(2),100226,1902,Gram-positive
+STR-0024,Streptococcus pyogenes M49 591,294934,1314,Gram-positive
+STR-0025,Vibrio campbellii ATCC BAA-1116,2902295,680,Gram-negative
+STR-0026,Vibrio parahaemolyticus RIMD 2210633,223926,670,Gram-negative
+STR-0027,Escherichia coli str. K-12 substr. MC4100,1403831,562,Gram-negative
+STR-0028,Synechocystis sp. PCC 6803 substr. Kazusa,1111708,1148,Gram-negative
+STR-0029,Deinococcus radiodurans CGMCC 1.633,,1299,Gram-positive
+STR-0030,Staphylococcus aureus subsp. aureus N315,158879,1280,Gram-positive
+STR-0031,Staphylococcus aureus subsp. aureus RN4220,561307,1280,Gram-positive
+STR-0032,Pasteurella multocida VP161,,747,Gram-negative
+STR-0033,Escherichia coli BW25113,679895,562,Gram-negative
+STR-0034,Escherichia coli K-12 strain GS162,,562,Gram-negative
+STR-0035,Nostoc sp. PCC 7120 = FACHB-418,,103690,Gram-negative
+STR-0036,Vibrio cholerae O1 str. C6706,1124478,666,Gram-negative
+STR-0037,Neisseria meningitidis MC58,122586,487,Gram-negative
+STR-0038,Neisseria meningitidis H44/76,909420,487,Gram-negative
+STR-0039,Streptococcus mutans UA159,210007,1309,Gram-positive
+STR-0040,Aliivibrio salmonicida LFI1238,316275,40269,Gram-negative
+STR-0041,Listeria monocytogenes EGD-e,169963,1639,Gram-positive
+STR-0042,Brucella melitensis bv. 1 str. 16M,224914,29459,Gram-negative
+STR-0043,Photorhabdus laumondii subsp. laumondii TTO1,243265,2218628,Gram-negative
+STR-0044,Xenorhabdus szentirmaii DSM 16338,1427518,290112,Gram-negative
+STR-0045,Staphylococcus epidermidis RP62A,176279,1282,Gram-positive
+STR-0046,Cereibacter sphaeroides 2.4.1,272943,1063,Gram-negative
+STR-0047,Vibrio cholerae O1 biovar El Tor str. N16961,243277,666,Gram-negative
+STR-0048,Sphingopyxis granuli strain TFA,,267128,Gram-negative
+STR-0049,Salmonella enterica subsp. enterica serovar Typhimurium str. LT2,99287,28901,Gram-negative
+STR-0050,Mycolicibacterium smegmatis MC2 155,246196,1772,Gram-positive
+STR-0051,Bacillus subtilis DB104,,1423,Gram-positive
+STR-0052,Clostridium acetobutylicum ATCC 824,272562,1488,Gram-positive
+STR-0053,Staphylococcus aureus 8325-4,,1280,Gram-positive
+STR-0054,Caulobacter vibrioides NA1000,565050,155892,Gram-negative
+STR-0055,Coxiella burnetii RSA 493,227377,777,Gram-negative
+STR-0056,Salmonella enterica subsp. enterica serovar Typhimurium str. ATCC 14028,1299114,28901,Gram-negative
+STR-0057,Chlamydia trachomatis D/UW-3/CX,272561,813,Gram-negative
+STR-0058,Chlamydia trachomatis L2/434/Bu(i),1263406,813,Gram-negative
+STR-0059,Chlamydia pneumoniae AR39,115711,83558,Gram-negative
+STR-0060,Chlamydia muridarum (HeLa 229 cells),,83560,Gram-negative
+STR-0061,Chlamydia caviae (HeLa 229 cells),,83557,Gram-negative
+STR-0062,Pseudomonas fluorescens 2P24,,294,Gram-negative
+STR-0063,Salmonella enterica subsp. enterica serovar Typhimurium str. UK-1,990282,28901,Gram-negative
+STR-0064,Azotobacter vinelandii Trans,,354,Gram-negative
+STR-0065,Erwinia amylovora Ea1189,,552,Gram-negative
+STR-0066,Staphylococcus epidermidis O-47,,1282,Gram-positive
+STR-0067,Burkholderia cenocepacia J2315,216591,95486,Gram-negative
+STR-0068,Rickettsia conorii str. Malish 7,272944,781,Gram-negative
+STR-0069,Yersinia pestis CO92,214092,632,Gram-negative
+STR-0070,Streptococcus sanguinis SK1 = NCTC 7863,888807,1305,Gram-positive
+STR-0071,Prochlorococcus marinus subsp. pastoris str. CCMP1986,59919,1219,Gram-negative
+STR-0072,Klebsiella pneumoniae str. SGH10,1711200,573,Gram-negative

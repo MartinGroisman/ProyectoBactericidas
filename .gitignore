@@ -5,7 +5,7 @@
 # reporte) y se excluye todo lo que el script regenera o lo que excede el
 # tamano razonable de un repositorio publico.
 #
-# La base y db/csv/ se reconstruyen con:  python scripts/build_db.py
+# La base se reconstruye con:  python scripts/build_db.py
 # seguido de los cargadores de fuentes adicionales (scripts/load_*.py).
 # ---------------------------------------------------------------------------
 
@@ -23,11 +23,12 @@ Full_data_set*.csv
 prueba_gebhardt/
 
 # --- Salidas generadas -----------------------------------------------------
-# La base completa (~72 MB) y las tablas exportadas (~29 MB) son reproducibles.
+# La base completa (~72 MB) es reproducible. Sus tablas, una por archivo en
+# db/csv/ (~29 MB, el mayor ~13 MB), si se versionan: son la base legible sin
+# correr los scripts y muestran en cada diff que cambio en los datos.
 db/*.sqlite
 db/*.sqlite3
 db/*.db
-db/csv/
 # copia de scripts/schema.sql que emite el script; la fuente es la de scripts/
 db/schema.sql
 # lista de exclusion (scripts/exportar_exclusion.py): pares y alias pesan ~14 MB

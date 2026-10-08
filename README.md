@@ -17,6 +17,7 @@ documentadas.
 | `scripts/buscar_candidatos.py` | Búsqueda en PubMed y Europe PMC de trabajos candidatos (`db/candidatos/`) |
 | `docs/hoja_de_ruta_nuevas_interacciones.md` | Plan para incorporar interacciones publicadas desde 2022 |
 | `tests/` | Pruebas: cadena completa de punta a punta y reintentos de red |
+| `db/csv/` | Las 21 tablas de la base, una por archivo, con los mismos nombres y columnas |
 | `db/README.md` | **Documentación completa del modelo de datos** |
 | `db/reporte_inconsistencias.md` | Síntesis de las correcciones aplicadas |
 
@@ -49,6 +50,11 @@ carga deja una bitácora de cambios en `db/cambios_gebhardt2023.md` y
 `db/cambios_gebhardt2023.csv`. `build_db.py` reconstruye la base desde cero, así que
 el cargador se debe volver a correr después de él. El criterio de carga se
 describe en [`db/README.md`](db/README.md#gebhardt-et-al-2023).
+
+La base (≈72 MB) no se versiona; sus tablas sí, en `db/csv/`: cada archivo lleva el
+nombre de su tabla y las columnas en el orden del esquema, de modo que la base se
+puede consultar o cargar en otro motor sin correr los scripts. Los dos scripts de
+carga los reescriben, así que cualquier cambio en los datos aparece en el diff.
 
 > **Datos de origen.** El archivo `Full_data_set_en uso.csv` (≈82 MB) no se
 > encuentra versionado, por exceder el tamaño recomendado para un repositorio

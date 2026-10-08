@@ -654,11 +654,13 @@ write_csv("binding_site", ["binding_site_id", "evidence_id", "molecule_role", "r
 write_csv("study", ["study_id", "evidence_id", "publication_id", "method_id",
                     "regulation_type_id", "rbp", "microbe_condition", "comments"], study_rows)
 # qc_issue = detalle fila por fila + una fila resumen por cada conversion sistematica
-qc_rows = [(ln, col, kind, val, act, 1) for (ln, col, kind, val, act) in ISSUES]
-qc_rows += [("(agregado)", col, kind, val, act, n)
+qc_rows = [(1, ln, col, kind, val, act) for (ln, col, kind, val, act) in ISSUES]
+qc_rows += [(n, "(agregado)", col, kind, val, act)
             for (col, kind, val, act), n in AGG.most_common()]
-write_csv("qc_issue", ["source_line", "column_name", "issue_type", "original_value",
-                       "action", "n_casos"], qc_rows)
+# columnas en el orden de schema.sql; issue_id explicito, como el resto de las claves
+write_csv("qc_issue", ["issue_id", "n_casos", "source_line", "column_name", "issue_type",
+                       "original_value", "action"],
+          [(i,) + r for i, r in enumerate(qc_rows, 1)])
 
 # --------------------------------------------------------------- 7. sqlite
 print("7) Construyendo SQLite ...")

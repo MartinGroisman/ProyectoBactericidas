@@ -1,0 +1,3 @@
+# Tablas exportadas de la base: csv.writer escribe CRLF y un campo puede llevar
+# saltos de linea; se guardan byte a byte, sin conversion de finales de linea.
+db/csv/*.csv -text

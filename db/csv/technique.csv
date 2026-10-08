@@ -1,0 +1,9 @@
+technique_id,technique_name,base_method,rbp
+TEC-001,CLASH with RNase E,CLASH,RNase E
+TEC-002,CLASH with Hfq,CLASH,Hfq
+TEC-003,GRIL-seq with HFq,GRIL-seq,HFq
+TEC-004,GRIL-seq,GRIL-seq,
+TEC-005,rGRIL-seq,rGRIL-seq,
+TEC-006,MS2-affinity purification,MS2-affinity purification,
+TEC-007,RIL-seq with Hfq,RIL-seq,Hfq
+TEC-008,RIL-seq with ProQ and Hfq,RIL-seq,ProQ and Hfq

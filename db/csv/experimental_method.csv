@@ -1,0 +1,38 @@
+method_id,method_name,method_type,method_group
+MET-001,CLASH,High-Throughput,Direct
+MET-002,Translational fusion reporter,Low-Throughput,Indirect
+MET-003,MAP-Seq,High-Throughput,Indirect
+MET-004,RNA-Sequencing,High-Throughput,Indirect
+MET-005,Northern blot,Low-Throughput,Indirect
+MET-006,beta-galactosidase activity assay,Low-Throughput,Indirect
+MET-007,rGRIL,High-Throughput,Direct
+MET-008,RIL-Seq,High-Throughput,Direct
+MET-009,Real-Time qRT-PCR,Low-Throughput,Indirect
+MET-010,GRIL,High-Throughput,Direct
+MET-011,Western blot,Low-Throughput,Indirect
+MET-012,Expression Microarray Assay,High-Throughput,Indirect
+MET-013,Hi-GRIL,High-Throughput,Direct
+MET-014,LIGR,High-Throughput,Direct
+MET-015,Electrophoretic Mobility Shift Assay,Low-Throughput,Direct
+MET-016,RNA footprint,Low-Throughput,Direct
+MET-017,Secondary structure probing,Low-Throughput,Direct
+MET-018,Translation toeprinting assay,Low-Throughput,Direct
+MET-019,Translational GFP Fusion,Low-Throughput,Indirect
+MET-020,RNase footprinting,Low-Throughput,Direct
+MET-021,Deletion mutants analysis,Low-Throughput,Direct
+MET-022,Site-directed mutagenesis,Low-Throughput,Direct
+MET-023,Paired compensatory mutations,Low-Throughput,Direct
+MET-024,Mass Spectrometry,Low-Throughput,Indirect
+MET-025,In vitro RNase E cleavage assay,Low-Throughput,Indirect
+MET-026,Translational EGFP Fusion,Low-Throughput,Indirect
+MET-027,CAS Assay,Low-Throughput,Indirect
+MET-028,Random mutagenesis,Low-Throughput,Direct
+MET-029,MicroScale Thermophoresis analysis,Low-Throughput,Indirect
+MET-030,Transcriptional fusion reporter,Low-Throughput,Indirect
+MET-031,High performance liquid chromatography mass spectrometry,Low-Throughput,Indirect
+MET-032,Colony fluorescence assay,Low-Throughput,Indirect
+MET-033,Flow cytometry,Low-Throughput,Indirect
+MET-034,sRNA pulse expression,Low-Throughput,Indirect
+MET-035,SPR spectroscopy,Low-Throughput,Direct
+MET-036,Bio-layer interferometry,Low-Throughput,Indirect
+MET-037,Immunoblotting,Low-Throughput,Indirect

@@ -16,7 +16,7 @@ mismos identificadores, de modo que los resultados son reproducibles.
 |---|---|
 | `bactericidas.sqlite` | Base de datos completa, con claves foráneas, índices y dos vistas |
 | `schema.sql` | Definición del esquema (DDL), copia de la utilizada por el script |
-| `csv/*.csv` | Una tabla por archivo, para su carga en PostgreSQL, MySQL, R o pandas |
+| `csv/*.csv` | Una tabla por archivo, con el nombre de la tabla y sus columnas en el orden de `schema.sql`, para su carga en PostgreSQL, MySQL, R o pandas. Se versionan en el repositorio |
 | `reporte_inconsistencias.md` | Síntesis de las correcciones aplicadas |
 | `csv/qc_issue.csv` | Registro detallado de cada inconsistencia, con su línea de origen |
 
