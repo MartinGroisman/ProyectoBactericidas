@@ -326,7 +326,8 @@ def rna_upsert(ln, strain_id, genome_id, name, ncbi_id, biocyc_id, biotype, prod
                         biotype=biotype, product=product, protein_id=protein_id,
                         is_srna=0, is_target=0, is_antisense=None,
                         is_plasmid_derived=None, plasmid_ncbi_id=plasmid_acc,
-                        is_est_utr=None, annotation_source=annotation_source, seq_id=None)
+                        is_est_utr=None, annotation_source=annotation_source, seq_id=None,
+                        hfq_class=None, hfq_class_evidence=None)
     e = rna[rid]
     for fld, val in (("is_antisense", antisense), ("is_plasmid_derived", plasmid_derived),
                      ("is_est_utr", est_utr)):
@@ -626,7 +627,8 @@ write_csv("replicon", ["replicon_id", "genome_id", "accession", "replicon_order"
 write_csv("sequence", ["seq_id", "seq_length", "gc_content", "molecule_type", "sequence"], seq_rows)
 RNA_COLS = ["rna_id", "strain_id", "rna_name", "rna_name_key", "ncbi_id", "biocyc_id",
             "biotype", "product", "protein_id", "is_srna", "is_target", "is_antisense",
-            "is_plasmid_derived", "plasmid_ncbi_id", "is_est_utr", "annotation_source", "seq_id"]
+            "is_plasmid_derived", "plasmid_ncbi_id", "is_est_utr", "annotation_source", "seq_id",
+            "hfq_class", "hfq_class_evidence"]
 write_csv("rna", RNA_COLS, [[e[c] for c in RNA_COLS] for e in rna.values()])
 write_csv("rna_sequence", ["rna_id", "seq_id", "is_canonical", "n_records"], rna_sequence_rows)
 write_csv("rna_synonym", ["rna_id", "synonym"],
@@ -653,6 +655,28 @@ write_csv("binding_site", ["binding_site_id", "evidence_id", "molecule_role", "r
                            "coords_were_flipped", "span_length", "seq_id"], bind_rows)
 write_csv("study", ["study_id", "evidence_id", "publication_id", "method_id",
                     "regulation_type_id", "rbp", "microbe_condition", "comments"], study_rows)
+# tablas que solo llenan los cargadores de fuentes adicionales (scripts/load_*.py)
+write_csv("evidence_stats", ["evidence_id", "source_ref", "hybrid_reads", "p_value",
+                             "p_value_kind", "score", "score_kind", "n_libraries",
+                             "chimera_order", "srna_binding_verified", "target_binding_verified",
+                             "confidence_level", "confidence_n_measurements",
+                             "confidence_reads_percentile"], [])
+write_csv("duplex_prediction", ["evidence_id", "source_ref", "srna_window_length",
+                                "target_window_length", "delta_g", "n_base_pairs",
+                                "srna_core_start", "srna_core_end", "target_core_start",
+                                "target_core_end", "srna_core_rel_pos", "target_core_rel_pos",
+                                "srna_core_sequence", "target_core_sequence", "structure",
+                                "n_helices", "helix_length", "helix_srna_start",
+                                "helix_srna_end", "helix_target_start", "helix_target_end",
+                                "helix_srna_rel_pos", "helix_target_rel_pos",
+                                "helix_srna_sequence", "helix_target_sequence", "helix_gc",
+                                "delta_g_null_shuffled", "delta_g_null_dinucleotide",
+                                "helix_null_shuffled", "helix_null_dinucleotide"], [])
+write_csv("srna_seed_region", ["seed_region_id", "species_taxid", "srna_name", "rna_id",
+                               "source_ref", "n_partners", "n_studies", "srna_length",
+                               "peak_fraction", "peak_position", "null_fraction",
+                               "enrichment_ratio", "p_value", "q_value", "region_start",
+                               "region_end", "region_length", "region_coverage"], [])
 # qc_issue = detalle fila por fila + una fila resumen por cada conversion sistematica
 qc_rows = [(1, ln, col, kind, val, act) for (ln, col, kind, val, act) in ISSUES]
 qc_rows += [(n, "(agregado)", col, kind, val, act)
@@ -677,7 +701,8 @@ con.executescript(SCHEMA)
 ORDER = ["phylum", "genus", "species", "strain", "genome", "replicon", "sequence", "rna",
          "rna_sequence", "rna_synonym", "rna_locus", "technique", "experimental_method",
          "regulation_type", "publication", "genome_publication", "interaction",
-         "interaction_evidence", "binding_site", "study", "qc_issue"]
+         "interaction_evidence", "binding_site", "study", "evidence_stats", "duplex_prediction",
+         "srna_seed_region", "qc_issue"]
 for t in ORDER:
     with open(os.path.join(CSVDIR, t + ".csv"), encoding="utf-8", newline="") as fh:
         rd = csv.reader(fh)

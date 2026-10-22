@@ -26,6 +26,9 @@ Origen: `Full_data_set_en uso.csv` (32677 filas x 52 columnas)
 | interaction_evidence | 32538 |
 | binding_site | 35813 |
 | study | 39556 |
+| evidence_stats | 0 |
+| duplex_prediction | 0 |
+| srna_seed_region | 0 |
 | qc_issue | 24490 |
 
 ## Inconsistencias detectadas (153088 celdas afectadas)

@@ -29,6 +29,12 @@ Estado de la base al 2026-09-29, consultado sobre `publication` e `interaction`:
   MAPS (`experimental_method`). Si aparece una técnica nueva, hay que darla de
   alta antes de cargar sus datos.
 
+> **Actualización 2026-10-22.** `scripts/load_csvs_nuevos.py` incorporó 16
+> trabajos de 2022–2026 desde un compendio externo (`db/fuentes/csvs_nuevos/`),
+> entre ellos RIL-seq en *A. baumannii* y CLASH y MAPS en *S. aureus*. Quedan
+> marcados con `decision = incluir` en `db/candidatos/candidatos.csv`. Siguen sin
+> datos *Enterococcus faecium* y *Enterobacter*.
+
 ## 1. Lista de exclusión (qué ya tenemos)
 
 **Hecho.** `python scripts\exportar_exclusion.py` exporta lo que ya está

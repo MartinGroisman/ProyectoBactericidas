@@ -1,0 +1,16 @@
+accesiones,strain_name,strain_taxid,species_taxid,species_name,genus_taxid,genus_name,phylum_taxid,phylum_name,gram_type,fuente_metadatos,nota
+CP000255.1,Staphylococcus aureus subsp. aureus USA300_FPR3757,451515,1280,Staphylococcus aureus,1279,Staphylococcus,1239,Bacillota,Gram-positive,ncbi,
+CP002120.1,Staphylococcus aureus subsp. aureus str. JKD6008,546342,1280,Staphylococcus aureus,1279,Staphylococcus,1239,Bacillota,Gram-positive,ncbi,
+NC_000913.3,Escherichia coli str. K-12 substr. MG1655,511145,562,Escherichia coli,561,Escherichia,1224,Pseudomonadota,Gram-negative,ncbi,
+NC_000913.3;J02459.1,Escherichia coli str. K-12 substr. MG1655,511145,562,Escherichia coli,561,Escherichia,1224,Pseudomonadota,Gram-negative,ncbi,
+NC_002505;NC_002506,Vibrio cholerae O1 biovar El Tor str. N16961,243277,666,Vibrio cholerae,662,Vibrio,1224,Pseudomonadota,Gram-negative,ncbi,
+NC_002516.2,Pseudomonas aeruginosa PAO1,208964,287,Pseudomonas aeruginosa,286,Pseudomonas,1224,Pseudomonadota,Gram-negative,ncbi,
+NC_002929.2,Bordetella pertussis Tohama I,257313,520,Bordetella pertussis,517,Bordetella,1224,Pseudomonadota,Gram-negative,ncbi,
+NC_009089.1,Clostridioides difficile 630,272563,1496,Clostridioides difficile,1870884,Clostridioides,1239,Bacillota,Gram-positive,ncbi,
+NC_009648.1;NC_009649.1;NC_009650.1;NC_009651.1;NC_009652.1;NC_009653.1,Klebsiella pneumoniae subsp. pneumoniae MGH 78578,272620,573,Klebsiella pneumoniae,570,Klebsiella,1224,Pseudomonadota,Gram-negative,ncbi,
+NC_016810.1,Salmonella enterica subsp. enterica serovar Typhimurium str. SL1344,216597,28901,Salmonella enterica,590,Salmonella,1224,Pseudomonadota,Gram-negative,ncbi,
+NC_016810.1;NC_017718.1;NC_017719.1;NC_017720.1,Salmonella enterica subsp. enterica serovar Typhimurium str. SL1344,216597,28901,Salmonella enterica,590,Salmonella,1224,Pseudomonadota,Gram-negative,ncbi,
+NC_020528.1;NC_020527.1;NC_020560.1,Sinorhizobium meliloti 2011,1286640,382,Ensifer meliloti,106591,Ensifer,1224,Pseudomonadota,Gram-negative,ncbi,
+NZ_CP008706.1;NZ_CP008707.1;NZ_CP008708.1;NZ_CP008709.1,Acinetobacter baumannii AB5075-UW,,470,Acinetobacter baumannii,469,Acinetobacter,1224,Pseudomonadota,Gram-negative,ncbi,
+NZ_CP009208.1,Klebsiella pneumoniae VK055,,573,Klebsiella pneumoniae,570,Klebsiella,1224,Pseudomonadota,Gram-negative,ncbi,cepa del experimento; el ensamblado es de Klebsiella pneumoniae subsp. pneumoniae ATCC 43816 KPPR1
+NZ_CP025080.1;NZ_CP025081.1,Klebsiella pneumoniae SGH10,,573,Klebsiella pneumoniae,570,Klebsiella,1224,Pseudomonadota,Gram-negative,ncbi,

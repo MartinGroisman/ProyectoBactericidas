@@ -47,7 +47,11 @@ phylum → genus → species → strain → genome → replicon
                               │
                      interaction_evidence (una fila del CSV original)
                               ├── binding_site → sequence
-                              └── study → publication / experimental_method / regulation_type
+                              ├── study → publication / experimental_method / regulation_type
+                              ├── evidence_stats
+                              └── duplex_prediction
+
+            species ── srna_seed_region ──> rna (cuando es una sola molécula)
 ```
 
 Dos tablas resultan centrales en el diseño:
@@ -78,7 +82,9 @@ que una planilla de laboratorio consigna el código de una cepa en lugar de
 repetir su denominación completa en cada registro. Las dos vistas descritas al
 final del apartado entregan esa vinculación ya resuelta.
 
-Las 21 tablas se organizan en cinco bloques.
+Las 24 tablas se organizan en cinco bloques. Tres de ellas (`evidence_stats`,
+`duplex_prediction` y `srna_seed_region`) solo las llenan las fuentes
+incorporadas después de la normalización; `build_db.py` las deja vacías.
 
 ### 1. Origen biológico del dato
 
@@ -93,11 +99,12 @@ Las 21 tablas se organizan en cinco bloques.
 
 | Tabla | Filas | Descripción de cada registro |
 |---|---:|---|
-| `rna` | 14.027 | **Catálogo de moléculas: un registro equivale a un ARN en una cepa.** Es la tabla de consulta para obtener, por ejemplo, el conjunto de sRNA de *Salmonella*. Los campos `is_srna` e `is_target` indican el rol con que la molécula participa —un mismo sRNA puede actuar como regulador en un registro y como blanco en otro—. Incluye asimismo el biotipo (mRNA, sRNA, tRNA, UGR, entre otros), el producto proteico y los identificadores de NCBI y BioCyc. |
+| `rna` | 14.027 | **Catálogo de moléculas: un registro equivale a un ARN en una cepa.** Es la tabla de consulta para obtener, por ejemplo, el conjunto de sRNA de *Salmonella*. Los campos `is_srna` e `is_target` indican el rol con que la molécula participa —un mismo sRNA puede actuar como regulador en un registro y como blanco en otro—. Incluye asimismo el biotipo (mRNA, sRNA, tRNA, UGR, entre otros), el producto proteico y los identificadores de NCBI y BioCyc. Para los sRNA de unión a Hfq, `hfq_class` indica la clase (I o II) y `hfq_class_evidence`, su respaldo. |
 | `sequence` | 32.744 | **Una secuencia nucleotídica, almacenada una única vez**, con su longitud y su contenido de GC. Comprende tanto las secuencias completas de sRNA y de mRNA como los fragmentos correspondientes a los sitios de unión. Las secuencias idénticas comparten `seq_id`, lo que permite detectar sRNA conservados entre cepas sin necesidad de alineamiento previo. |
 | `rna_sequence` | 11.008 | Tabla de vinculación entre las dos anteriores: **registra qué secuencias fueron atribuidas a cada molécula**. Cuando una molécula presenta más de una —por diferencias de anotación o de ensamblado—, se conservan todas; la marcada con `is_canonical = 1` es la adoptada como principal, por ser la de mayor frecuencia. |
 | `rna_synonym` | 9.928 | Denominaciones alternativas de cada molécula (`yhiB`, `ECK3856`, entre otras), una por registro. Permite recuperar un ARN a partir de nomenclaturas en desuso. |
 | `rna_locus` | 4.253 | **Ubicación del gen en el genoma**: coordenadas de inicio y fin, hebra, longitud del tramo y genes flanqueantes. Se mantiene separada de `rna` porque una misma molécula puede presentar coordenadas distintas según la fuente de anotación. El campo `coords_were_flipped = 1` señala los registros que en el archivo original consignaban el inicio con posterioridad al fin. |
+| `srna_seed_region` | — | **Región del sRNA donde se concentra el apareamiento con sus blancos** (posible semilla), calculada sobre todos sus blancos en la especie: posición pico, fracción de blancos que la cubren frente a la esperada al azar, p y q. Se identifica por especie y nombre del sRNA; `rna_id` se completa cuando ese sRNA es una sola molécula de la base. |
 
 ### 3. La interacción sRNA – blanco
 
@@ -109,6 +116,8 @@ Las 21 tablas se organizan en cinco bloques.
 | `technique` | 8 | Ensayo general del que procede el dato (`RIL-seq with Hfq`, `CLASH with RNase E`, `MS2-affinity purification`, entre otros), desagregado en método base y proteína de unión a ARN utilizada. |
 | `experimental_method` | 37 | Método específico informado por cada estudio (CLASH, fusión traduccional, EMSA, entre otros), clasificado por tipo (alto rendimiento o dirigido) y por grupo (directo o indirecto). Es la tabla que permite restringir el análisis a la evidencia directa. |
 | `regulation_type` | 2 | Sentido de la regulación informada: represión o activación. |
+| `evidence_stats` | — | **Estadísticos que la fuente informa para una evidencia de alto rendimiento**: lecturas quiméricas, p-valor, *odds ratio* o enriquecimiento, número de réplicas, de qué lado de la quimera está el sRNA y nivel de confianza. Como cada trabajo informa un estadístico distinto, `p_value_kind` (Fisher, Bonferroni, FDR…) y `score_kind` (*odds ratio*, *connection score*, log2 del enriquecimiento) indican qué es cada valor. |
+| `duplex_prediction` | — | **Dúplex sRNA–blanco predicho** a partir de las dos ventanas de binding: ΔG, estructura en notación de puntos y paréntesis, núcleo apareado, hélice más larga y ΔG de modelos nulos con secuencias barajadas. Es un cálculo, no una medición. |
 
 ### 4. Información bibliográfica
 
@@ -223,6 +232,76 @@ Criterios adoptados:
 - **Rol de los sRNA.** `is_srna` indica que la molécula actúa como regulador,
   igual que en `build_db.py`. Los 36 sRNA nuevos que sólo aparecen como blanco de
   otro sRNA tienen `biotype = 'sRNA'` pero `is_srna = 0`.
+- **Estadísticos.** Los fragmentos quiméricos, el *odds ratio* y el p de Fisher
+  de cada quimera quedan en `evidence_stats` (`source_ref = 'S1_exp #13'`), además
+  del texto de `study.comments`. El *odds ratio* `inf` queda nulo.
+
+### CSV nuevos (compendio externo)
+
+Exportación de un compendio de interacciones armado fuera de este repositorio,
+en otro esquema: estudios, entidades (una molécula por especie), interacciones,
+dúplex predichos y regiones consenso. Está en `db/fuentes/csvs_nuevos/`, cuyo
+[README](fuentes/csvs_nuevos/README.md) describe cada archivo.
+
+```powershell
+python scripts\completar_csvs_nuevos.py     # solo si cambian las fuentes; usa red
+python scripts\load_csvs_nuevos.py
+```
+
+**Qué se carga.** Los 44 estudios de las ingestas posteriores a la migración que
+no estaban en la base, de 16 publicaciones (2022–2026): RIL-seq, iRIL-seq y
+Hi-GRIL-seq con Hfq o ProQ, CLASH con RNasa III y MAPS. Suman 66.817 evidencias,
+33.165 interacciones nuevas y tres especies que la base no tenía
+(*Acinetobacter baumannii*, *Clostridioides difficile*, *Bordetella pertussis*),
+además de cepas nuevas de *Klebsiella pneumoniae* y *Staphylococcus aureus*. El
+detalle por estudio está en `db/cambios_csvs_nuevos.md`.
+
+**Qué no se carga.**
+
+- Las filas `migracion_v1`, que son esta misma base migrada al otro esquema.
+- Las reingestas de trabajos que ya estaban (Melamed 2016 y 2020, Gebhardt
+  2023), que la propia fuente marca como duplicado.
+- El CLIP-seq de Bergman 2024, que no tiene pares ARN–ARN.
+- Las 223 filas de Silverman 2025 en las que una de las moléculas es del fago
+  lambda y no de *E. coli*.
+
+Criterios adoptados:
+
+- **Metadatos.** La fuente no trae título, revista ni cepa, y tiene errores:
+  tres DOI apuntan a otro trabajo o no existen, y cinco primeros autores están
+  mal escritos. `completar_csvs_nuevos.py` toma los datos de PubMed y NCBI. El
+  PMID de los DOI erróneos sale de la serie de GEO que cita el estudio. Todo
+  queda en `complementos/`, que se puede corregir a mano.
+- **Genoma.** Se usa el genoma de la base que ya tiene alguna de las accesiones
+  del estudio. Si la accesión está en varios genomas, se toma el primero cargado
+  (NC_000913.3 → MG1655). Los replicones que el genoma no tiene (plásmidos, el
+  fago lambda) se anotan en `qc_issue` y no se agregan. Wu 2024 midió en
+  *K. pneumoniae* VK055 pero anotó contra KPPR1: la cepa queda como VK055.
+- **Identidad de las moléculas.** La fuente tiene una molécula por especie y la
+  base una por cepa, así que cada entidad se busca en la cepa del estudio por
+  locus, BioCyc, nombre y sinónimos, con la comparación de nombres de Gebhardt.
+  Las entidades de UTR (`thrL.5UTR`, `ompF.EST3UTR`) se asignan al mRNA del gen.
+  Una molécula nueva toma secuencia y locus de la entidad solo si la entidad
+  está anotada sobre el mismo ensamblado del estudio.
+- **Cada fila** de `interacciones.csv` da una `interaction_evidence` con su
+  `study` y hasta dos `binding_site`. `study.comments` y
+  `evidence_stats.source_ref` remiten a la fila de origen (`INT078590`).
+  `region_involved_mrna` solo se completa con CDS, 5'UTR o 3'UTR.
+- **Valores numéricos.** El *odds ratio* perdió la coma decimal en la mayoría de
+  los estudios de RIL-seq (`144.852.081.396.333`). No se puede recuperar y queda
+  nulo; también quedan nulos todos los de un estudio en que la mayoría vienen
+  así. Lo mismo pasa con el log2 del enriquecimiento de MAPS ≥ 1. La coma decimal
+  de los p-valores (`6,98E-15`) se convierte. Cada caso consta, agregado por
+  estudio, en `qc_issue`.
+- **Dúplex.** Se cargan los de las evidencias nuevas y también los de evidencias
+  que ya estaban, cuando la fila de la fuente coincide sin ambigüedad en las dos
+  ventanas de binding y el `pairing_id`.
+- **Clase Hfq.** `rna.hfq_class` se completa en cada molécula a la que
+  corresponde una entidad clasificada, sin sobrescribir valores existentes.
+- **SGH10.** Goh et al. 2024 aporta evidencia a casi todos los pares de
+  *K. pneumoniae* SGH10 que estaban sin publicación. La fila
+  `pendiente_de_curacion` se conserva hasta confirmar que ese lote es el mismo
+  trabajo.
 
 ## Correcciones aplicadas
 

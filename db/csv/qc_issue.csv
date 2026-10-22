@@ -24508,3 +24508,361 @@ issue_id,n_casos,source_line,column_name,issue_type,original_value,action
 24507,1,Gebhardt2023,rna.is_target,rol_nuevo_en_molecula_existente,RNA-002447 (ErsA),0 -> 1
 24508,1,Gebhardt2023,rna.is_target,rol_nuevo_en_molecula_existente,RNA-002443 (Sr0161),0 -> 1
 24509,1,Gebhardt2023,rna.is_target,rol_nuevo_en_molecula_existente,RNA-010293 (RgsA),0 -> 1
+24510,1,CsvsNuevos EST0430,*,publicacion_ya_en_la_base,"PMID 31761494, 535 filas",no se carga: reingesta del mismo experimento
+24511,1,CsvsNuevos EST0431,*,publicacion_ya_en_la_base,"PMID 31761494, 133 filas",no se carga: reingesta del mismo experimento
+24512,1,CsvsNuevos EST0432,*,publicacion_ya_en_la_base,"PMID 31761494, 2838 filas",no se carga: reingesta del mismo experimento
+24513,1,CsvsNuevos EST0433,*,publicacion_ya_en_la_base,"PMID 31761494, 2565 filas",no se carga: reingesta del mismo experimento
+24514,1,CsvsNuevos EST0434,*,publicacion_ya_en_la_base,"PMID 31761494, 535 filas",no se carga: reingesta del mismo experimento
+24515,1,CsvsNuevos EST0435,*,publicacion_ya_en_la_base,"PMID 31761494, 212 filas",no se carga: reingesta del mismo experimento
+24516,1,CsvsNuevos EST0436,*,publicacion_ya_en_la_base,"PMID 31761494, 2662 filas",no se carga: reingesta del mismo experimento
+24517,1,CsvsNuevos EST0437,*,publicacion_ya_en_la_base,"PMID 31761494, 4270 filas",no se carga: reingesta del mismo experimento
+24518,1,CsvsNuevos EST0438,*,publicacion_ya_en_la_base,"PMID 27588604, 685 filas",no se carga: reingesta del mismo experimento
+24519,1,CsvsNuevos EST0439,*,publicacion_ya_en_la_base,"PMID 27588604, 1198 filas",no se carga: reingesta del mismo experimento
+24520,1,CsvsNuevos EST0440,*,publicacion_ya_en_la_base,"PMID 27588604, 1407 filas",no se carga: reingesta del mismo experimento
+24521,1,CsvsNuevos EST0442,*,publicacion_ya_en_la_base,"PMID 37285605, 937 filas",no se carga: reingesta del mismo experimento
+24522,1,CsvsNuevos EST0443,*,publicacion_ya_en_la_base,"PMID 37285605, 509 filas",no se carga: reingesta del mismo experimento
+24523,1,CsvsNuevos EST0477,*,estudio_sin_interacciones,CLIP-Seq,no se carga
+24524,1,CsvsNuevos 10.1016/j.molcel.2025.11.019,publication_doi,metadato_corregido,10.1016/j.molcel.2025.11.019,primer autor en estudios.csv: Daniel Silverman
+24525,1,CsvsNuevos 10.1093/nar/gkaf1313,publication_doi,metadato_corregido,10.1093/nar/gkaf1313,primer autor en estudios.csv: Xiangqian Luo
+24526,1,CsvsNuevos 10.1128/mbio.03576-21,publication_doi,metadato_corregido,10.1128/mbio.03576-21,anio de la publicacion electronica (PubMed registra 2021); primer autor en estudios.csv: Natalia I. Garcia-Tomsig
+24527,1,CsvsNuevos 10.1016/j.micres.2026.128480,publication_doi,metadato_corregido,10.1016/j.micres.2026.128480,primer autor en estudios.csv: Natalia I. Garcia-Tomsig
+24528,1,CsvsNuevos 10.1038/s41467-022-34073-3,publication_doi,metadato_corregido,10.1038/s41467-022-34073-3,el DOI de la fuente es de otro trabajo; PMID segun GEO GSE166151
+24529,1,CsvsNuevos 10.1128/spectrum.00552-24,publication_doi,metadato_corregido,10.1128/spectrum.00552-24,el DOI de la fuente no existe; PMID segun GEO GSE254532
+24530,1,CsvsNuevos 10.1128/jb.00145-25,publication_doi,metadato_corregido,10.1128/jb.00145-25,el DOI de la fuente es de otro trabajo; PMID segun GEO GSE296222
+24531,1,CsvsNuevos 10.1038/s41467-024-51213-z,publication_doi,metadato_corregido,10.1038/s41467-024-51213-z,primer autor en estudios.csv: Winton Wu
+24532,1,CsvsNuevos EST0427,ensamblado_accession,replicon_no_registrado_en_el_genoma,GEN-0005: NC_002506,se usa el genoma existente; el replicon no se agrega
+24533,1,CsvsNuevos EST0447,ensamblado_accession,replicon_no_registrado_en_el_genoma,GEN-0074: NZ_CP025081.1,se usa el genoma existente; el replicon no se agrega
+24534,1,CsvsNuevos EST0452,ensamblado_accession,replicon_no_registrado_en_el_genoma,"GEN-0009: NC_017718.1, NC_017719.1, NC_017720.1",se usa el genoma existente; el replicon no se agrega
+24535,1,CsvsNuevos EST0459,ensamblado_accession,accesion_en_varios_genomas,"NC_000913.3: GEN-0002, GEN-0029, GEN-0036","se usa GEN-0002 (STR-0002), el primero cargado"
+24536,1,CsvsNuevos EST0459,ensamblado_accession,replicon_no_registrado_en_el_genoma,GEN-0002: J02459.1,se usa el genoma existente; el replicon no se agrega
+24537,1,CsvsNuevos EST0463,ensamblado_accession,accesion_en_varios_genomas,"NC_000913.3: GEN-0002, GEN-0029, GEN-0036","se usa GEN-0002 (STR-0002), el primero cargado"
+24538,1,CsvsNuevos EST0489,strain_name,cepa_distinta_del_ensamblado,Klebsiella pneumoniae VK055,cepa del experimento; el ensamblado es de Klebsiella pneumoniae subsp. pneumoniae ATCC 43816 KPPR1
+24539,1,CsvsNuevos duplex.csv,interaccion_id,duplex_sin_evidencia_asociada,sin_ventanas: 134 filas,no se carga
+24540,1,CsvsNuevos duplex.csv,interaccion_id,duplex_sin_evidencia_asociada,sin_evidencia: 20351 filas,no se carga
+24541,1,CsvsNuevos regiones_consenso RNA27191,entidad_id,region_de_varias_moleculas,"srn_4100_sprG3: RNA-025631, RNA-027722",rna_id = NULL; se usa especie y nombre
+24542,1,CsvsNuevos regiones_consenso RNA00539,entidad_id,region_de_varias_moleculas,"ChiX: RNA-000056, RNA-000686, RNA-008756",rna_id = NULL; se usa especie y nombre
+24543,1,CsvsNuevos regiones_consenso RNA26709,entidad_id,region_de_varias_moleculas,"srn_3840_sprG1: RNA-025191, RNA-027703",rna_id = NULL; se usa especie y nombre
+24544,1,CsvsNuevos regiones_consenso RNA00638,entidad_id,region_de_varias_moleculas,"CyaR: RNA-000141, RNA-000694, RNA-008633",rna_id = NULL; se usa especie y nombre
+24545,1,CsvsNuevos regiones_consenso RNA02767,entidad_id,region_de_varias_moleculas,"RprA: RNA-000233, RNA-000755, RNA-008686",rna_id = NULL; se usa especie y nombre
+24546,1,CsvsNuevos regiones_consenso RNA02865,entidad_id,region_de_varias_moleculas,"RyhB: RNA-000001, RNA-000781, RNA-008679",rna_id = NULL; se usa especie y nombre
+24547,1,CsvsNuevos regiones_consenso RNA05541,entidad_id,region_de_varias_moleculas,"rprA: RNA-012217, RNA-017965",rna_id = NULL; se usa especie y nombre
+24548,1,CsvsNuevos regiones_consenso RNA05242,entidad_id,region_de_varias_moleculas,"mgrR: RNA-012249, RNA-017944",rna_id = NULL; se usa especie y nombre
+24549,1,CsvsNuevos regiones_consenso RNA02948,entidad_id,region_de_varias_moleculas,"SgrS: RNA-000382, RNA-000929, RNA-008642",rna_id = NULL; se usa especie y nombre
+24550,1,CsvsNuevos regiones_consenso RNA00287,entidad_id,region_de_varias_moleculas,"ArcZ: RNA-000278, RNA-000673, RNA-008635",rna_id = NULL; se usa especie y nombre
+24551,1,CsvsNuevos regiones_consenso RNA04883,entidad_id,region_de_varias_moleculas,"cpxQ: RNA-012222, RNA-017926",rna_id = NULL; se usa especie y nombre
+24552,1,CsvsNuevos regiones_consenso RNA01231,entidad_id,region_de_varias_moleculas,"GcvB: RNA-000301, RNA-000679, RNA-008637",rna_id = NULL; se usa especie y nombre
+24553,1,CsvsNuevos regiones_consenso RNA06431,entidad_id,region_de_varias_moleculas,"spf: RNA-012257, RNA-018015",rna_id = NULL; se usa especie y nombre
+24554,1,CsvsNuevos regiones_consenso RNA02227,entidad_id,region_de_varias_moleculas,"OmrA: RNA-000303, RNA-000850, RNA-009209, RNA-010024",rna_id = NULL; se usa especie y nombre
+24555,1,CsvsNuevos regiones_consenso RNA01956,entidad_id,region_de_varias_moleculas,"MicF: RNA-000288, RNA-001156, RNA-008761",rna_id = NULL; se usa especie y nombre
+24556,1,CsvsNuevos regiones_consenso RNA00807,entidad_id,region_de_varias_moleculas,"DsrA: RNA-000241, RNA-000770, RNA-008862",rna_id = NULL; se usa especie y nombre
+24557,1,CsvsNuevos regiones_consenso RNA02861,entidad_id,region_de_varias_moleculas,"RyeA: RNA-000406, RNA-000684",rna_id = NULL; se usa especie y nombre
+24558,1,CsvsNuevos regiones_consenso RNA01288,entidad_id,region_de_varias_moleculas,"GlnZ: RNA-008014, RNA-008688",rna_id = NULL; se usa especie y nombre
+24559,1,CsvsNuevos regiones_consenso RNA03005,entidad_id,region_de_varias_moleculas,"SroH: RNA-000313, RNA-000709",rna_id = NULL; se usa especie y nombre
+24560,1,CsvsNuevos regiones_consenso RNA01943,entidad_id,region_de_varias_moleculas,"MgrR: RNA-000102, RNA-000712, RNA-008640",rna_id = NULL; se usa especie y nombre
+24561,1,CsvsNuevos regiones_consenso RNA05016,entidad_id,region_de_varias_moleculas,"fnrS: RNA-012252, RNA-017942",rna_id = NULL; se usa especie y nombre
+24562,1,CsvsNuevos regiones_consenso RNA01272,entidad_id,region_de_varias_moleculas,"GlmZ: RNA-000130, RNA-000837, RNA-009408",rna_id = NULL; se usa especie y nombre
+24563,1,CsvsNuevos regiones_consenso RNA01203,entidad_id,region_de_varias_moleculas,"GadY: RNA-000060, RNA-000749, RNA-008819",rna_id = NULL; se usa especie y nombre
+24564,1,CsvsNuevos regiones_consenso RNA01111,entidad_id,region_de_varias_moleculas,"FnrS: RNA-000438, RNA-002981, RNA-008651",rna_id = NULL; se usa especie y nombre
+24565,1,CsvsNuevos regiones_consenso RNA26684,entidad_id,region_de_varias_moleculas,"srn_2740_Teg108: RNA-025168, RNA-028113",rna_id = NULL; se usa especie y nombre
+24566,1,CsvsNuevos regiones_consenso RNA02858,entidad_id,region_de_varias_moleculas,"RybB: RNA-000369, RNA-000723, RNA-009211",rna_id = NULL; se usa especie y nombre
+24567,1,CsvsNuevos regiones_consenso RNA04900,entidad_id,region_de_varias_moleculas,"cyaR: RNA-012214, RNA-017924",rna_id = NULL; se usa especie y nombre
+24568,1,CsvsNuevos regiones_consenso RNA04794,entidad_id,region_de_varias_moleculas,"arcZ: RNA-012218, RNA-017922",rna_id = NULL; se usa especie y nombre
+24569,1,CsvsNuevos regiones_consenso RNA02252,entidad_id,region_de_varias_moleculas,"OxyS: RNA-000359, RNA-000758, RNA-008653",rna_id = NULL; se usa especie y nombre
+24570,1,CsvsNuevos regiones_consenso RNA05051,entidad_id,region_de_varias_moleculas,"gcvB: RNA-012224, RNA-017920",rna_id = NULL; se usa especie y nombre
+24571,1,CsvsNuevos regiones_consenso RNA27290,entidad_id,region_de_varias_moleculas,"srn_4830_Sau6072: RNA-025722, RNA-027751",rna_id = NULL; se usa especie y nombre
+24572,1,CsvsNuevos regiones_consenso RNA04952,entidad_id,region_de_varias_moleculas,"dsrA: RNA-012233, RNA-017976",rna_id = NULL; se usa especie y nombre
+24573,1,CsvsNuevos regiones_consenso RNA27377,entidad_id,region_de_varias_moleculas,"srn_1510_rsaA: RNA-025801, RNA-027629",rna_id = NULL; se usa especie y nombre
+24574,1,CsvsNuevos regiones_consenso RNA05247,entidad_id,region_de_varias_moleculas,"micF: RNA-012264, RNA-017923",rna_id = NULL; se usa especie y nombre
+24575,1,CsvsNuevos regiones_consenso RNA02989,entidad_id,region_de_varias_moleculas,"Spf: RNA-000137, RNA-000670, RNA-008647",rna_id = NULL; se usa especie y nombre
+24576,1,CsvsNuevos regiones_consenso RNA05245,entidad_id,region_de_varias_moleculas,"micA: RNA-012225, RNA-017993",rna_id = NULL; se usa especie y nombre
+24577,1,CsvsNuevos regiones_consenso RNA00751,entidad_id,region_de_varias_moleculas,"DicF: RNA-000431, RNA-001173",rna_id = NULL; se usa especie y nombre
+24578,1,CsvsNuevos regiones_consenso RNA05593,entidad_id,region_de_varias_moleculas,"sdsR: RNA-012279, RNA-017930",rna_id = NULL; se usa especie y nombre
+24579,1,CsvsNuevos regiones_consenso RNA26695,entidad_id,region_de_varias_moleculas,"srn_3580_SprA1: RNA-025179, RNA-027990",rna_id = NULL; se usa especie y nombre
+24580,1,CsvsNuevos regiones_consenso RNA01873,entidad_id,region_de_varias_moleculas,"McaS: RNA-000244, RNA-008019, RNA-008708",rna_id = NULL; se usa especie y nombre
+24581,1,CsvsNuevos regiones_consenso RNA02228,entidad_id,region_de_varias_moleculas,"OmrB: RNA-000261, RNA-000718, RNA-008975, RNA-010026",rna_id = NULL; se usa especie y nombre
+24582,1,CsvsNuevos regiones_consenso RNA02860,entidad_id,region_de_varias_moleculas,"RydC: RNA-000811, RNA-008921",rna_id = NULL; se usa especie y nombre
+24583,1,CsvsNuevos regiones_consenso RNA26711,entidad_id,region_de_varias_moleculas,"srn_3910_RNAIII: RNA-025193, RNA-027708",rna_id = NULL; se usa especie y nombre
+24584,1,CsvsNuevos regiones_consenso RNA01957,entidad_id,region_de_varias_moleculas,"MicL: RNA-008406, RNA-008764",rna_id = NULL; se usa especie y nombre
+24585,1,CsvsNuevos regiones_consenso RNA01954,entidad_id,region_de_varias_moleculas,"MicA: RNA-000298, RNA-000675",rna_id = NULL; se usa especie y nombre
+24586,1,CsvsNuevos regiones_consenso RNA05069,entidad_id,region_de_varias_moleculas,"glnZ: RNA-012240, RNA-018022",rna_id = NULL; se usa especie y nombre
+24587,1,CsvsNuevos regiones_consenso RNA00334,entidad_id,region_de_varias_moleculas,"ArrS: RNA-000677, RNA-008643",rna_id = NULL; se usa especie y nombre
+24588,1,CsvsNuevos regiones_consenso RNA05581,entidad_id,region_de_varias_moleculas,"ryhB-2: RNA-012213, RNA-018273",rna_id = NULL; se usa especie y nombre
+24589,1,CsvsNuevos regiones_consenso RNA02593,entidad_id,region_de_varias_moleculas,"RdlA: RNA-000337, RNA-001384",rna_id = NULL; se usa especie y nombre
+24590,774,CsvsNuevos EST0427,fdr,coma_decimal,,convertida a punto
+24591,1879,CsvsNuevos EST0427,odds_ratio,separador_de_miles_corrompido,,-> NULL (la coma decimal se perdio; el valor no es recuperable)
+24592,174,CsvsNuevos EST0427,region_blanco,region_no_es_de_mrna,IGR,region_involved_mrna = NULL
+24593,1595,CsvsNuevos EST0427,region_blanco,region_no_es_de_mrna,mRNA,region_involved_mrna = NULL
+24594,110,CsvsNuevos EST0427,region_blanco,region_no_es_de_mrna,sRNA,region_involved_mrna = NULL
+24595,650,CsvsNuevos EST0428,fdr,coma_decimal,,convertida a punto
+24596,1442,CsvsNuevos EST0428,odds_ratio,separador_de_miles_corrompido,,-> NULL (la coma decimal se perdio; el valor no es recuperable)
+24597,187,CsvsNuevos EST0428,region_blanco,region_no_es_de_mrna,IGR,region_involved_mrna = NULL
+24598,1152,CsvsNuevos EST0428,region_blanco,region_no_es_de_mrna,mRNA,region_involved_mrna = NULL
+24599,103,CsvsNuevos EST0428,region_blanco,region_no_es_de_mrna,sRNA,region_involved_mrna = NULL
+24600,67,CsvsNuevos EST0429,fdr,coma_decimal,,convertida a punto
+24601,89,CsvsNuevos EST0429,odds_ratio,separador_de_miles_corrompido,,-> NULL (la coma decimal se perdio; el valor no es recuperable)
+24602,6,CsvsNuevos EST0429,region_blanco,region_no_es_de_mrna,AS,region_involved_mrna = NULL
+24603,21,CsvsNuevos EST0429,region_blanco,region_no_es_de_mrna,IGR,region_involved_mrna = NULL
+24604,1,CsvsNuevos EST0429,region_blanco,region_no_es_de_mrna,IGT,region_involved_mrna = NULL
+24605,1,CsvsNuevos EST0429,region_blanco,region_no_es_de_mrna,IGT_AS,region_involved_mrna = NULL
+24606,3,CsvsNuevos EST0429,region_blanco,region_no_es_de_mrna,sRNA,region_involved_mrna = NULL
+24607,5,CsvsNuevos EST0429,region_blanco,region_no_es_de_mrna,tRNA,region_involved_mrna = NULL
+24608,1382,CsvsNuevos EST0441,fdr,coma_decimal,,convertida a punto
+24609,1887,CsvsNuevos EST0441,odds_ratio,separador_de_miles_corrompido,,-> NULL (la coma decimal se perdio; el valor no es recuperable)
+24610,11,CsvsNuevos EST0441,odds_ratio,valor_no_finito,Inf,-> NULL
+24611,55,CsvsNuevos EST0441,region_blanco,region_no_es_de_mrna,AS,region_involved_mrna = NULL
+24612,17,CsvsNuevos EST0441,region_blanco,region_no_es_de_mrna,CRISPR,region_involved_mrna = NULL
+24613,78,CsvsNuevos EST0441,region_blanco,region_no_es_de_mrna,IGR,region_involved_mrna = NULL
+24614,33,CsvsNuevos EST0441,region_blanco,region_no_es_de_mrna,Riboswitch,region_involved_mrna = NULL
+24615,48,CsvsNuevos EST0441,region_blanco,region_no_es_de_mrna,sRNA,region_involved_mrna = NULL
+24616,1,CsvsNuevos EST0441,region_blanco,region_no_es_de_mrna,tRNA,region_involved_mrna = NULL
+24617,415,CsvsNuevos EST0444,fdr,coma_decimal,,convertida a punto
+24618,492,CsvsNuevos EST0444,odds_ratio,separador_de_miles_corrompido,,-> NULL (la coma decimal se perdio; el valor no es recuperable)
+24619,8,CsvsNuevos EST0444,odds_ratio,valor_no_finito,inf,-> NULL
+24620,25,CsvsNuevos EST0444,region_blanco,region_no_es_de_mrna,AS,region_involved_mrna = NULL
+24621,2,CsvsNuevos EST0444,region_blanco,region_no_es_de_mrna,CRISPR,region_involved_mrna = NULL
+24622,34,CsvsNuevos EST0444,region_blanco,region_no_es_de_mrna,IGR,region_involved_mrna = NULL
+24623,2,CsvsNuevos EST0444,region_blanco,region_no_es_de_mrna,rRNA,region_involved_mrna = NULL
+24624,45,CsvsNuevos EST0444,region_blanco,region_no_es_de_mrna,sRNA,region_involved_mrna = NULL
+24625,15,CsvsNuevos EST0444,region_blanco,region_no_es_de_mrna,tRNA,region_involved_mrna = NULL
+24626,387,CsvsNuevos EST0445,fdr,coma_decimal,,convertida a punto
+24627,426,CsvsNuevos EST0445,odds_ratio,separador_de_miles_corrompido,,-> NULL (la coma decimal se perdio; el valor no es recuperable)
+24628,42,CsvsNuevos EST0445,odds_ratio,valor_no_finito,inf,-> NULL
+24629,35,CsvsNuevos EST0445,region_blanco,region_no_es_de_mrna,AS,region_involved_mrna = NULL
+24630,1,CsvsNuevos EST0445,region_blanco,region_no_es_de_mrna,CRISPR,region_involved_mrna = NULL
+24631,28,CsvsNuevos EST0445,region_blanco,region_no_es_de_mrna,IGR,region_involved_mrna = NULL
+24632,54,CsvsNuevos EST0445,region_blanco,region_no_es_de_mrna,sRNA,region_involved_mrna = NULL
+24633,5,CsvsNuevos EST0445,region_blanco,region_no_es_de_mrna,tRNA,region_involved_mrna = NULL
+24634,223,CsvsNuevos EST0446,fdr,coma_decimal,,convertida a punto
+24635,311,CsvsNuevos EST0446,fdr,valor_no_finito,NaN,-> NULL
+24636,101,CsvsNuevos EST0446,region_blanco,region_no_es_de_mrna,IGR,region_involved_mrna = NULL
+24637,62,CsvsNuevos EST0446,region_blanco,region_no_es_de_mrna,sRNA,region_involved_mrna = NULL
+24638,2,CsvsNuevos EST0447,fdr,coma_decimal,,convertida a punto
+24639,1423,CsvsNuevos EST0447,n_librerias,valor_no_numerico,u,-> NULL
+24640,1,CsvsNuevos EST0447,odds_ratio,separador_de_miles_corrompido,,-> NULL (la coma decimal se perdio; el valor no es recuperable)
+24641,299,CsvsNuevos EST0447,region_blanco,region_no_es_de_mrna,AS,region_involved_mrna = NULL
+24642,1079,CsvsNuevos EST0447,region_blanco,region_no_es_de_mrna,IGR,region_involved_mrna = NULL
+24643,9,CsvsNuevos EST0447,region_blanco,region_no_es_de_mrna,otro_ncRNA,region_involved_mrna = NULL
+24644,30,CsvsNuevos EST0447,region_blanco,region_no_es_de_mrna,sRNA,region_involved_mrna = NULL
+24645,18,CsvsNuevos EST0447,region_blanco,region_no_es_de_mrna,tRNA,region_involved_mrna = NULL
+24646,317,CsvsNuevos EST0448,n_librerias,valor_no_numerico,u,-> NULL
+24647,2,CsvsNuevos EST0448,odds_ratio,separador_de_miles_corrompido,,-> NULL (la coma decimal se perdio; el valor no es recuperable)
+24648,30,CsvsNuevos EST0448,region_blanco,region_no_es_de_mrna,AS,region_involved_mrna = NULL
+24649,183,CsvsNuevos EST0448,region_blanco,region_no_es_de_mrna,IGR,region_involved_mrna = NULL
+24650,2,CsvsNuevos EST0448,region_blanco,region_no_es_de_mrna,otro_ncRNA,region_involved_mrna = NULL
+24651,17,CsvsNuevos EST0448,region_blanco,region_no_es_de_mrna,sRNA,region_involved_mrna = NULL
+24652,3,CsvsNuevos EST0448,region_blanco,region_no_es_de_mrna,tRNA,region_involved_mrna = NULL
+24653,1,CsvsNuevos EST0449,fdr,coma_decimal,,convertida a punto
+24654,1,CsvsNuevos EST0449,odds_ratio,columna_corrompida_en_el_estudio,,-> NULL (la mayoria de los valores del estudio tienen el separador de miles corrompido)
+24655,413,CsvsNuevos EST0449,odds_ratio,separador_de_miles_corrompido,,-> NULL (la coma decimal se perdio; el valor no es recuperable)
+24656,29,CsvsNuevos EST0449,region_blanco,region_no_es_de_mrna,AS,region_involved_mrna = NULL
+24657,50,CsvsNuevos EST0449,region_blanco,region_no_es_de_mrna,IGR,region_involved_mrna = NULL
+24658,24,CsvsNuevos EST0449,region_blanco,region_no_es_de_mrna,sRNA,region_involved_mrna = NULL
+24659,1,CsvsNuevos EST0450,fdr,coma_decimal,,convertida a punto
+24660,1,CsvsNuevos EST0450,odds_ratio,columna_corrompida_en_el_estudio,,-> NULL (la mayoria de los valores del estudio tienen el separador de miles corrompido)
+24661,830,CsvsNuevos EST0450,odds_ratio,separador_de_miles_corrompido,,-> NULL (la coma decimal se perdio; el valor no es recuperable)
+24662,59,CsvsNuevos EST0450,region_blanco,region_no_es_de_mrna,AS,region_involved_mrna = NULL
+24663,65,CsvsNuevos EST0450,region_blanco,region_no_es_de_mrna,IGR,region_involved_mrna = NULL
+24664,45,CsvsNuevos EST0450,region_blanco,region_no_es_de_mrna,sRNA,region_involved_mrna = NULL
+24665,5,CsvsNuevos EST0451,fdr,coma_decimal,,convertida a punto
+24666,1689,CsvsNuevos EST0451,odds_ratio,separador_de_miles_corrompido,,-> NULL (la coma decimal se perdio; el valor no es recuperable)
+24667,170,CsvsNuevos EST0451,region_blanco,region_no_es_de_mrna,AS,region_involved_mrna = NULL
+24668,132,CsvsNuevos EST0451,region_blanco,region_no_es_de_mrna,IGR,region_involved_mrna = NULL
+24669,61,CsvsNuevos EST0451,region_blanco,region_no_es_de_mrna,sRNA,region_involved_mrna = NULL
+24670,6260,CsvsNuevos EST0452,fdr,coma_decimal,,convertida a punto
+24671,5,CsvsNuevos EST0452,odds_ratio,columna_corrompida_en_el_estudio,,-> NULL (la mayoria de los valores del estudio tienen el separador de miles corrompido)
+24672,7088,CsvsNuevos EST0452,odds_ratio,separador_de_miles_corrompido,,-> NULL (la coma decimal se perdio; el valor no es recuperable)
+24673,1228,CsvsNuevos EST0452,region_blanco,region_no_es_de_mrna,IGR,region_involved_mrna = NULL
+24674,193,CsvsNuevos EST0452,region_blanco,region_no_es_de_mrna,exon,region_involved_mrna = NULL
+24675,34,CsvsNuevos EST0452,region_blanco,region_no_es_de_mrna,sORF,region_involved_mrna = NULL
+24676,124,CsvsNuevos EST0452,region_blanco,region_no_es_de_mrna,sRNA,region_involved_mrna = NULL
+24677,51,CsvsNuevos EST0452,region_blanco,region_no_es_de_mrna,tRNA,region_involved_mrna = NULL
+24678,3235,CsvsNuevos EST0453,fdr,coma_decimal,,convertida a punto
+24679,3,CsvsNuevos EST0453,odds_ratio,columna_corrompida_en_el_estudio,,-> NULL (la mayoria de los valores del estudio tienen el separador de miles corrompido)
+24680,4150,CsvsNuevos EST0453,odds_ratio,separador_de_miles_corrompido,,-> NULL (la coma decimal se perdio; el valor no es recuperable)
+24681,586,CsvsNuevos EST0453,region_blanco,region_no_es_de_mrna,IGR,region_involved_mrna = NULL
+24682,82,CsvsNuevos EST0453,region_blanco,region_no_es_de_mrna,exon,region_involved_mrna = NULL
+24683,39,CsvsNuevos EST0453,region_blanco,region_no_es_de_mrna,sORF,region_involved_mrna = NULL
+24684,128,CsvsNuevos EST0453,region_blanco,region_no_es_de_mrna,sRNA,region_involved_mrna = NULL
+24685,77,CsvsNuevos EST0453,region_blanco,region_no_es_de_mrna,tRNA,region_involved_mrna = NULL
+24686,1224,CsvsNuevos EST0459,fdr,coma_decimal,,convertida a punto
+24687,370,CsvsNuevos EST0459,n_librerias,valor_no_numerico,U,-> NULL
+24688,1693,CsvsNuevos EST0459,odds_ratio,separador_de_miles_corrompido,,-> NULL (la coma decimal se perdio; el valor no es recuperable)
+24689,1,CsvsNuevos EST0459,odds_ratio,valor_no_finito,inf,-> NULL
+24690,1,CsvsNuevos EST0459,organismo_especie,molecula_de_otro_organismo,Escherichia virus Lambda,fila descartada
+24691,58,CsvsNuevos EST0459,region_blanco,region_no_es_de_mrna,AS,region_involved_mrna = NULL
+24692,132,CsvsNuevos EST0459,region_blanco,region_no_es_de_mrna,IGR,region_involved_mrna = NULL
+24693,20,CsvsNuevos EST0459,region_blanco,region_no_es_de_mrna,sRNA,region_involved_mrna = NULL
+24694,6,CsvsNuevos EST0459,region_blanco,region_no_es_de_mrna,tRNA,region_involved_mrna = NULL
+24695,1000,CsvsNuevos EST0460,fdr,coma_decimal,,convertida a punto
+24696,276,CsvsNuevos EST0460,n_librerias,valor_no_numerico,U,-> NULL
+24697,1354,CsvsNuevos EST0460,odds_ratio,separador_de_miles_corrompido,,-> NULL (la coma decimal se perdio; el valor no es recuperable)
+24698,2,CsvsNuevos EST0460,organismo_especie,molecula_de_otro_organismo,Escherichia virus Lambda,fila descartada
+24699,44,CsvsNuevos EST0460,region_blanco,region_no_es_de_mrna,AS,region_involved_mrna = NULL
+24700,99,CsvsNuevos EST0460,region_blanco,region_no_es_de_mrna,IGR,region_involved_mrna = NULL
+24701,16,CsvsNuevos EST0460,region_blanco,region_no_es_de_mrna,sRNA,region_involved_mrna = NULL
+24702,7,CsvsNuevos EST0460,region_blanco,region_no_es_de_mrna,tRNA,region_involved_mrna = NULL
+24703,1270,CsvsNuevos EST0461,fdr,coma_decimal,,convertida a punto
+24704,397,CsvsNuevos EST0461,n_librerias,valor_no_numerico,U,-> NULL
+24705,1746,CsvsNuevos EST0461,odds_ratio,separador_de_miles_corrompido,,-> NULL (la coma decimal se perdio; el valor no es recuperable)
+24706,1,CsvsNuevos EST0461,odds_ratio,valor_no_finito,inf,-> NULL
+24707,126,CsvsNuevos EST0461,organismo_especie,molecula_de_otro_organismo,Escherichia virus Lambda,fila descartada
+24708,65,CsvsNuevos EST0461,region_blanco,region_no_es_de_mrna,AS,region_involved_mrna = NULL
+24709,139,CsvsNuevos EST0461,region_blanco,region_no_es_de_mrna,IGR,region_involved_mrna = NULL
+24710,18,CsvsNuevos EST0461,region_blanco,region_no_es_de_mrna,sRNA,region_involved_mrna = NULL
+24711,4,CsvsNuevos EST0461,region_blanco,region_no_es_de_mrna,tRNA,region_involved_mrna = NULL
+24712,1013,CsvsNuevos EST0462,fdr,coma_decimal,,convertida a punto
+24713,215,CsvsNuevos EST0462,n_librerias,valor_no_numerico,U,-> NULL
+24714,1362,CsvsNuevos EST0462,odds_ratio,separador_de_miles_corrompido,,-> NULL (la coma decimal se perdio; el valor no es recuperable)
+24715,107,CsvsNuevos EST0462,organismo_especie,molecula_de_otro_organismo,Escherichia virus Lambda,fila descartada
+24716,40,CsvsNuevos EST0462,region_blanco,region_no_es_de_mrna,AS,region_involved_mrna = NULL
+24717,106,CsvsNuevos EST0462,region_blanco,region_no_es_de_mrna,IGR,region_involved_mrna = NULL
+24718,17,CsvsNuevos EST0462,region_blanco,region_no_es_de_mrna,sRNA,region_involved_mrna = NULL
+24719,7,CsvsNuevos EST0462,region_blanco,region_no_es_de_mrna,tRNA,region_involved_mrna = NULL
+24720,2605,CsvsNuevos EST0463,fdr,coma_decimal,,convertida a punto
+24721,3579,CsvsNuevos EST0463,odds_ratio,separador_de_miles_corrompido,,-> NULL (la coma decimal se perdio; el valor no es recuperable)
+24722,12,CsvsNuevos EST0463,odds_ratio,valor_no_finito,#NUM!,-> NULL
+24723,162,CsvsNuevos EST0463,region_blanco,region_no_es_de_mrna,AS,region_involved_mrna = NULL
+24724,247,CsvsNuevos EST0463,region_blanco,region_no_es_de_mrna,IGR,region_involved_mrna = NULL
+24725,30,CsvsNuevos EST0463,region_blanco,region_no_es_de_mrna,other-ncRNA,region_involved_mrna = NULL
+24726,6,CsvsNuevos EST0463,region_blanco,region_no_es_de_mrna,rRNA,region_involved_mrna = NULL
+24727,20,CsvsNuevos EST0463,region_blanco,region_no_es_de_mrna,sRNA,region_involved_mrna = NULL
+24728,3,CsvsNuevos EST0463,region_blanco,region_no_es_de_mrna,tRNA,region_involved_mrna = NULL
+24729,1697,CsvsNuevos EST0464,fdr,coma_decimal,,convertida a punto
+24730,2317,CsvsNuevos EST0464,odds_ratio,separador_de_miles_corrompido,,-> NULL (la coma decimal se perdio; el valor no es recuperable)
+24731,4,CsvsNuevos EST0464,odds_ratio,valor_no_finito,#NUM!,-> NULL
+24732,100,CsvsNuevos EST0464,region_blanco,region_no_es_de_mrna,AS,region_involved_mrna = NULL
+24733,207,CsvsNuevos EST0464,region_blanco,region_no_es_de_mrna,IGR,region_involved_mrna = NULL
+24734,24,CsvsNuevos EST0464,region_blanco,region_no_es_de_mrna,other-ncRNA,region_involved_mrna = NULL
+24735,3,CsvsNuevos EST0464,region_blanco,region_no_es_de_mrna,rRNA,region_involved_mrna = NULL
+24736,19,CsvsNuevos EST0464,region_blanco,region_no_es_de_mrna,sRNA,region_involved_mrna = NULL
+24737,1,CsvsNuevos EST0464,region_blanco,region_no_es_de_mrna,tRNA,region_involved_mrna = NULL
+24738,1107,CsvsNuevos EST0465,fdr,coma_decimal,,convertida a punto
+24739,1433,CsvsNuevos EST0465,odds_ratio,separador_de_miles_corrompido,,-> NULL (la coma decimal se perdio; el valor no es recuperable)
+24740,12,CsvsNuevos EST0465,odds_ratio,valor_no_finito,#NUM!,-> NULL
+24741,58,CsvsNuevos EST0465,region_blanco,region_no_es_de_mrna,AS,region_involved_mrna = NULL
+24742,128,CsvsNuevos EST0465,region_blanco,region_no_es_de_mrna,IGR,region_involved_mrna = NULL
+24743,7,CsvsNuevos EST0465,region_blanco,region_no_es_de_mrna,other-ncRNA,region_involved_mrna = NULL
+24744,1,CsvsNuevos EST0465,region_blanco,region_no_es_de_mrna,rRNA,region_involved_mrna = NULL
+24745,11,CsvsNuevos EST0465,region_blanco,region_no_es_de_mrna,sRNA,region_involved_mrna = NULL
+24746,2969,CsvsNuevos EST0466,fdr,coma_decimal,,convertida a punto
+24747,4065,CsvsNuevos EST0466,odds_ratio,separador_de_miles_corrompido,,-> NULL (la coma decimal se perdio; el valor no es recuperable)
+24748,29,CsvsNuevos EST0466,odds_ratio,valor_no_finito,#NUM!,-> NULL
+24749,159,CsvsNuevos EST0466,region_blanco,region_no_es_de_mrna,AS,region_involved_mrna = NULL
+24750,284,CsvsNuevos EST0466,region_blanco,region_no_es_de_mrna,IGR,region_involved_mrna = NULL
+24751,26,CsvsNuevos EST0466,region_blanco,region_no_es_de_mrna,other-ncRNA,region_involved_mrna = NULL
+24752,3,CsvsNuevos EST0466,region_blanco,region_no_es_de_mrna,rRNA,region_involved_mrna = NULL
+24753,23,CsvsNuevos EST0466,region_blanco,region_no_es_de_mrna,sRNA,region_involved_mrna = NULL
+24754,3,CsvsNuevos EST0466,region_blanco,region_no_es_de_mrna,tRNA,region_involved_mrna = NULL
+24755,48,CsvsNuevos EST0467,fdr,coma_decimal,,convertida a punto
+24756,50,CsvsNuevos EST0467,odds_ratio,separador_de_miles_corrompido,,-> NULL (la coma decimal se perdio; el valor no es recuperable)
+24757,2,CsvsNuevos EST0467,odds_ratio,valor_no_finito,#NUM!,-> NULL
+24758,1,CsvsNuevos EST0467,region_blanco,region_no_es_de_mrna,AS,region_involved_mrna = NULL
+24759,4,CsvsNuevos EST0467,region_blanco,region_no_es_de_mrna,IGR,region_involved_mrna = NULL
+24760,2,CsvsNuevos EST0467,region_blanco,region_no_es_de_mrna,other-ncRNA,region_involved_mrna = NULL
+24761,1,CsvsNuevos EST0467,region_blanco,region_no_es_de_mrna,sRNA,region_involved_mrna = NULL
+24762,1,CsvsNuevos EST0467,region_blanco,region_no_es_de_mrna,tRNA,region_involved_mrna = NULL
+24763,2866,CsvsNuevos EST0468,fdr,coma_decimal,,convertida a punto
+24764,2,CsvsNuevos EST0468,odds_ratio,columna_corrompida_en_el_estudio,,-> NULL (la mayoria de los valores del estudio tienen el separador de miles corrompido)
+24765,3889,CsvsNuevos EST0468,odds_ratio,separador_de_miles_corrompido,,-> NULL (la coma decimal se perdio; el valor no es recuperable)
+24766,30,CsvsNuevos EST0468,odds_ratio,valor_no_finito,#NUM!,-> NULL
+24767,181,CsvsNuevos EST0468,region_blanco,region_no_es_de_mrna,AS,region_involved_mrna = NULL
+24768,297,CsvsNuevos EST0468,region_blanco,region_no_es_de_mrna,IGR,region_involved_mrna = NULL
+24769,22,CsvsNuevos EST0468,region_blanco,region_no_es_de_mrna,other-ncRNA,region_involved_mrna = NULL
+24770,6,CsvsNuevos EST0468,region_blanco,region_no_es_de_mrna,rRNA,region_involved_mrna = NULL
+24771,23,CsvsNuevos EST0468,region_blanco,region_no_es_de_mrna,sRNA,region_involved_mrna = NULL
+24772,3,CsvsNuevos EST0468,region_blanco,region_no_es_de_mrna,tRNA,region_involved_mrna = NULL
+24773,4004,CsvsNuevos EST0469,fdr,coma_decimal,,convertida a punto
+24774,5464,CsvsNuevos EST0469,odds_ratio,separador_de_miles_corrompido,,-> NULL (la coma decimal se perdio; el valor no es recuperable)
+24775,31,CsvsNuevos EST0469,odds_ratio,valor_no_finito,#NUM!,-> NULL
+24776,287,CsvsNuevos EST0469,region_blanco,region_no_es_de_mrna,AS,region_involved_mrna = NULL
+24777,389,CsvsNuevos EST0469,region_blanco,region_no_es_de_mrna,IGR,region_involved_mrna = NULL
+24778,31,CsvsNuevos EST0469,region_blanco,region_no_es_de_mrna,other-ncRNA,region_involved_mrna = NULL
+24779,13,CsvsNuevos EST0469,region_blanco,region_no_es_de_mrna,rRNA,region_involved_mrna = NULL
+24780,19,CsvsNuevos EST0469,region_blanco,region_no_es_de_mrna,sRNA,region_involved_mrna = NULL
+24781,14,CsvsNuevos EST0469,region_blanco,region_no_es_de_mrna,tRNA,region_involved_mrna = NULL
+24782,125,CsvsNuevos EST0470,fdr,coma_decimal,,convertida a punto
+24783,139,CsvsNuevos EST0470,odds_ratio,separador_de_miles_corrompido,,-> NULL (la coma decimal se perdio; el valor no es recuperable)
+24784,3,CsvsNuevos EST0470,odds_ratio,valor_no_finito,#NUM!,-> NULL
+24785,2,CsvsNuevos EST0470,region_blanco,region_no_es_de_mrna,AS,region_involved_mrna = NULL
+24786,7,CsvsNuevos EST0470,region_blanco,region_no_es_de_mrna,IGR,region_involved_mrna = NULL
+24787,4,CsvsNuevos EST0470,region_blanco,region_no_es_de_mrna,other-ncRNA,region_involved_mrna = NULL
+24788,10,CsvsNuevos EST0470,region_blanco,region_no_es_de_mrna,sRNA,region_involved_mrna = NULL
+24789,1,CsvsNuevos EST0470,region_blanco,region_no_es_de_mrna,tRNA,region_involved_mrna = NULL
+24790,108,CsvsNuevos EST0471,fdr,coma_decimal,,convertida a punto
+24791,126,CsvsNuevos EST0471,odds_ratio,separador_de_miles_corrompido,,-> NULL (la coma decimal se perdio; el valor no es recuperable)
+24792,1,CsvsNuevos EST0471,odds_ratio,valor_no_finito,#NUM!,-> NULL
+24793,2,CsvsNuevos EST0471,region_blanco,region_no_es_de_mrna,AS,region_involved_mrna = NULL
+24794,10,CsvsNuevos EST0471,region_blanco,region_no_es_de_mrna,IGR,region_involved_mrna = NULL
+24795,2,CsvsNuevos EST0471,region_blanco,region_no_es_de_mrna,other-ncRNA,region_involved_mrna = NULL
+24796,2,CsvsNuevos EST0471,region_blanco,region_no_es_de_mrna,sRNA,region_involved_mrna = NULL
+24797,1,CsvsNuevos EST0471,region_blanco,region_no_es_de_mrna,tRNA,region_involved_mrna = NULL
+24798,177,CsvsNuevos EST0472,fdr,coma_decimal,,convertida a punto
+24799,210,CsvsNuevos EST0472,odds_ratio,separador_de_miles_corrompido,,-> NULL (la coma decimal se perdio; el valor no es recuperable)
+24800,4,CsvsNuevos EST0472,region_blanco,region_no_es_de_mrna,AS,region_involved_mrna = NULL
+24801,23,CsvsNuevos EST0472,region_blanco,region_no_es_de_mrna,IGR,region_involved_mrna = NULL
+24802,5,CsvsNuevos EST0472,region_blanco,region_no_es_de_mrna,other-ncRNA,region_involved_mrna = NULL
+24803,3,CsvsNuevos EST0472,region_blanco,region_no_es_de_mrna,sRNA,region_involved_mrna = NULL
+24804,2,CsvsNuevos EST0472,region_blanco,region_no_es_de_mrna,tRNA,region_involved_mrna = NULL
+24805,22,CsvsNuevos EST0473,fdr,coma_decimal,,convertida a punto
+24806,28,CsvsNuevos EST0473,odds_ratio,separador_de_miles_corrompido,,-> NULL (la coma decimal se perdio; el valor no es recuperable)
+24807,1,CsvsNuevos EST0473,region_blanco,region_no_es_de_mrna,AS,region_involved_mrna = NULL
+24808,5,CsvsNuevos EST0473,region_blanco,region_no_es_de_mrna,IGR,region_involved_mrna = NULL
+24809,1,CsvsNuevos EST0473,region_blanco,region_no_es_de_mrna,other-ncRNA,region_involved_mrna = NULL
+24810,27,CsvsNuevos EST0474,fdr,coma_decimal,,convertida a punto
+24811,31,CsvsNuevos EST0474,odds_ratio,separador_de_miles_corrompido,,-> NULL (la coma decimal se perdio; el valor no es recuperable)
+24812,5,CsvsNuevos EST0474,region_blanco,region_no_es_de_mrna,IGR,region_involved_mrna = NULL
+24813,1,CsvsNuevos EST0474,region_blanco,region_no_es_de_mrna,sRNA,region_involved_mrna = NULL
+24814,1,CsvsNuevos EST0474,region_blanco,region_no_es_de_mrna,tRNA,region_involved_mrna = NULL
+24815,1299,CsvsNuevos EST0475,fdr,coma_decimal,,convertida a punto
+24816,1776,CsvsNuevos EST0475,odds_ratio,separador_de_miles_corrompido,,-> NULL (la coma decimal se perdio; el valor no es recuperable)
+24817,17,CsvsNuevos EST0475,odds_ratio,valor_no_finito,#NUM!,-> NULL
+24818,197,CsvsNuevos EST0475,region_blanco,region_no_es_de_mrna,AS,region_involved_mrna = NULL
+24819,228,CsvsNuevos EST0475,region_blanco,region_no_es_de_mrna,IGR,region_involved_mrna = NULL
+24820,16,CsvsNuevos EST0475,region_blanco,region_no_es_de_mrna,other-ncRNA,region_involved_mrna = NULL
+24821,8,CsvsNuevos EST0475,region_blanco,region_no_es_de_mrna,rRNA,region_involved_mrna = NULL
+24822,10,CsvsNuevos EST0475,region_blanco,region_no_es_de_mrna,sRNA,region_involved_mrna = NULL
+24823,66,CsvsNuevos EST0475,region_blanco,region_no_es_de_mrna,tRNA,region_involved_mrna = NULL
+24824,68,CsvsNuevos EST0476,fdr,coma_decimal,,convertida a punto
+24825,100,CsvsNuevos EST0476,odds_ratio,separador_de_miles_corrompido,,-> NULL (la coma decimal se perdio; el valor no es recuperable)
+24826,2,CsvsNuevos EST0476,odds_ratio,valor_no_finito,#NUM!,-> NULL
+24827,5,CsvsNuevos EST0476,region_blanco,region_no_es_de_mrna,AS,region_involved_mrna = NULL
+24828,19,CsvsNuevos EST0476,region_blanco,region_no_es_de_mrna,IGR,region_involved_mrna = NULL
+24829,3,CsvsNuevos EST0476,region_blanco,region_no_es_de_mrna,other-ncRNA,region_involved_mrna = NULL
+24830,3,CsvsNuevos EST0476,region_blanco,region_no_es_de_mrna,tRNA,region_involved_mrna = NULL
+24831,200,CsvsNuevos EST0478,enriquecimiento_log2,ambiguo_separador_de_miles,,-> NULL (tres decimales: puede ser un separador de miles)
+24832,273,CsvsNuevos EST0479,enriquecimiento_log2,ambiguo_separador_de_miles,,-> NULL (tres decimales: puede ser un separador de miles)
+24833,424,CsvsNuevos EST0480,enriquecimiento_log2,ambiguo_separador_de_miles,,-> NULL (tres decimales: puede ser un separador de miles)
+24834,2,CsvsNuevos EST0481,fdr,coma_decimal,,convertida a punto
+24835,36,CsvsNuevos EST0481,odds_ratio,valor_no_finito,inf,-> NULL
+24836,6,CsvsNuevos EST0481,region_blanco,region_no_es_de_mrna,AS,region_involved_mrna = NULL
+24837,2,CsvsNuevos EST0481,region_blanco,region_no_es_de_mrna,IGR,region_involved_mrna = NULL
+24838,3,CsvsNuevos EST0481,region_blanco,region_no_es_de_mrna,sRNA,region_involved_mrna = NULL
+24839,32,CsvsNuevos EST0482,fdr,coma_decimal,,convertida a punto
+24840,8,CsvsNuevos EST0482,odds_ratio,coma_decimal,,convertida a punto
+24841,770,CsvsNuevos EST0482,odds_ratio,valor_no_finito,inf,-> NULL
+24842,95,CsvsNuevos EST0482,region_blanco,region_no_es_de_mrna,AS,region_involved_mrna = NULL
+24843,32,CsvsNuevos EST0482,region_blanco,region_no_es_de_mrna,IGR,region_involved_mrna = NULL
+24844,48,CsvsNuevos EST0482,region_blanco,region_no_es_de_mrna,rRNA,region_involved_mrna = NULL
+24845,282,CsvsNuevos EST0482,region_blanco,region_no_es_de_mrna,sRNA,region_involved_mrna = NULL
+24846,118,CsvsNuevos EST0483,fdr,coma_decimal,,convertida a punto
+24847,5,CsvsNuevos EST0483,odds_ratio,coma_decimal,,convertida a punto
+24848,1,CsvsNuevos EST0483,odds_ratio,separador_de_miles_corrompido,,-> NULL (la coma decimal se perdio; el valor no es recuperable)
+24849,871,CsvsNuevos EST0483,odds_ratio,valor_no_finito,inf,-> NULL
+24850,183,CsvsNuevos EST0483,region_blanco,region_no_es_de_mrna,AS,region_involved_mrna = NULL
+24851,115,CsvsNuevos EST0483,region_blanco,region_no_es_de_mrna,IGR,region_involved_mrna = NULL
+24852,99,CsvsNuevos EST0483,region_blanco,region_no_es_de_mrna,sRNA,region_involved_mrna = NULL
+24853,148,CsvsNuevos EST0484,odds_ratio,separador_de_miles_corrompido,,-> NULL (la coma decimal se perdio; el valor no es recuperable)
+24854,219,CsvsNuevos EST0484,region_blanco,region_no_es_de_mrna,IGR,region_involved_mrna = NULL
+24855,48,CsvsNuevos EST0484,region_blanco,region_no_es_de_mrna,sRNA,region_involved_mrna = NULL
+24856,75,CsvsNuevos EST0484,region_blanco,region_no_es_de_mrna,tRNA,region_involved_mrna = NULL
+24857,7,CsvsNuevos EST0485,enriquecimiento_log2,ambiguo_separador_de_miles,,-> NULL (tres decimales: puede ser un separador de miles)
+24858,34,CsvsNuevos EST0486,enriquecimiento_log2,ambiguo_separador_de_miles,,-> NULL (tres decimales: puede ser un separador de miles)
+24859,123,CsvsNuevos EST0487,fdr,coma_decimal,,convertida a punto
+24860,61,CsvsNuevos EST0487,region_blanco,region_no_es_de_mrna,AS,region_involved_mrna = NULL
+24861,31,CsvsNuevos EST0487,region_blanco,region_no_es_de_mrna,IGR,region_involved_mrna = NULL
+24862,17,CsvsNuevos EST0487,region_blanco,region_no_es_de_mrna,sRNA,region_involved_mrna = NULL
+24863,239,CsvsNuevos EST0488,fdr,coma_decimal,,convertida a punto
+24864,296,CsvsNuevos EST0489,fdr,coma_decimal,,convertida a punto
+24865,1,CsvsNuevos EST0489,n_librerias,valor_no_numerico,U,-> NULL
+24866,2800,CsvsNuevos EST0489,odds_ratio,separador_de_miles_corrompido,,-> NULL (la coma decimal se perdio; el valor no es recuperable)
+24867,468,CsvsNuevos EST0489,region_blanco,region_no_es_de_mrna,IGR,region_involved_mrna = NULL

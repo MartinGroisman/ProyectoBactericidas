@@ -36,3 +36,4 @@ MET-034,sRNA pulse expression,Low-Throughput,Indirect
 MET-035,SPR spectroscopy,Low-Throughput,Direct
 MET-036,Bio-layer interferometry,Low-Throughput,Indirect
 MET-037,Immunoblotting,Low-Throughput,Indirect
+MET-038,iRIL-Seq,High-Throughput,Direct

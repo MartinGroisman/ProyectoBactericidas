@@ -43,6 +43,7 @@ También se conservan `sd01_Legend.csv` y `sd02_Description.csv`, que describen 
 | interaction_evidence | 32538 | 1484 |  | 34022 |
 | binding_site | 35813 | 2892 |  | 38705 |
 | study | 39556 | 1490 |  | 41046 |
+| evidence_stats | 0 | 1446 |  | 1446 |
 | qc_issue | 24490 | 19 |  | 24509 |
 
 El resto de las tablas (taxonomía, genomas, replicones, secuencias, locus, técnicas, métodos y tipos de regulación) no cambia. Se reutilizaron las técnicas y los métodos que ya existían: `TEC-007` (RIL-seq with Hfq) y los métodos `MET-002` (Translational fusion reporter), `MET-004` (RNA-Sequencing), `MET-008` (RIL-Seq), `MET-009` (Real-Time qRT-PCR), `MET-011` (Western blot), `MET-022` (Site-directed mutagenesis), `MET-023` (Paired compensatory mutations).
@@ -84,7 +85,7 @@ Sinónimos agregados a moléculas que ya existían:
 | sd01_S_chimeras_in_Exp_Phase.csv | 997 | 937 | 60 |
 | sd01_S_chimeras_in_Stat_Phase.csv | 702 | 509 | 193 |
 
-Cada fila cargada genera una `interaction_evidence` con técnica `TEC-007`, un `study` con método RIL-Seq, `rbp = Hfq` y la fase en `microbe_condition`, y dos `binding_site`. El campo `comments` del `study` guarda el número de fila de la hoja, los fragmentos quiméricos, el *odds ratio* y el p de Fisher. En 123 filas ambos ARN son sRNA; en ese caso se tomó RNA2 como regulador.
+Cada fila cargada genera una `interaction_evidence` con técnica `TEC-007`, un `study` con método RIL-Seq, `rbp = Hfq` y la fase en `microbe_condition`, y dos `binding_site`. El campo `comments` del `study` guarda el número de fila de la hoja, los fragmentos quiméricos, el *odds ratio* y el p de Fisher; esos tres valores quedan además como números en `evidence_stats` (el *odds ratio* `inf` queda nulo). En 123 filas ambos ARN son sRNA; en ese caso se tomó RNA2 como regulador.
 
 Filas excluidas, por combinación de clases (RNA1 / RNA2):
 
