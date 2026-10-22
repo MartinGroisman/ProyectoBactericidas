@@ -71,3 +71,10 @@ STR-0069,Yersinia pestis CO92,214092,632,Gram-negative
 STR-0070,Streptococcus sanguinis SK1 = NCTC 7863,888807,1305,Gram-positive
 STR-0071,Prochlorococcus marinus subsp. pastoris str. CCMP1986,59919,1219,Gram-negative
 STR-0072,Klebsiella pneumoniae str. SGH10,1711200,573,Gram-negative
+STR-0073,Bordetella pertussis Tohama I,257313,520,Gram-negative
+STR-0074,Clostridioides difficile 630,272563,1496,Gram-positive
+STR-0075,Acinetobacter baumannii AB5075-UW,,470,Gram-negative
+STR-0076,Klebsiella pneumoniae subsp. pneumoniae MGH 78578,272620,573,Gram-negative
+STR-0077,Staphylococcus aureus subsp. aureus USA300_FPR3757,451515,1280,Gram-positive
+STR-0078,Staphylococcus aureus subsp. aureus str. JKD6008,546342,1280,Gram-positive
+STR-0079,Klebsiella pneumoniae VK055,,573,Gram-negative

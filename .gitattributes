@@ -1,3 +1,6 @@
 # Tablas exportadas de la base: csv.writer escribe CRLF y un campo puede llevar
 # saltos de linea; se guardan byte a byte, sin conversion de finales de linea.
 db/csv/*.csv -text
+# Fuentes de las cargas adicionales: se conservan tal como llegaron (CRLF), para
+# que el SHA-1 que registra cada bitacora siga valiendo.
+db/fuentes/csvs_nuevos/**/*.csv -text

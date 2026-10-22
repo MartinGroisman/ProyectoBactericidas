@@ -13,11 +13,13 @@ documentadas.
 | `scripts/schema.sql` | Definición del esquema relacional (DDL) |
 | `scripts/xlsx_a_csv.py` | Conversión de planillas suplementarias (.xlsx) a CSV |
 | `scripts/load_gebhardt2023.py` | Incorporación de Gebhardt et al. 2023 (RIL-seq, *P. aeruginosa* PAO1) |
+| `scripts/load_csvs_nuevos.py` | Incorporación de 16 trabajos de un compendio externo (`db/fuentes/csvs_nuevos/`) |
+| `scripts/completar_csvs_nuevos.py` | Metadatos de PubMed y NCBI que ese compendio no trae |
 | `scripts/exportar_exclusion.py` | Lista de exclusión: publicaciones, pares y alias ya cargados, para buscar fuentes nuevas |
 | `scripts/buscar_candidatos.py` | Búsqueda en PubMed y Europe PMC de trabajos candidatos (`db/candidatos/`) |
 | `docs/hoja_de_ruta_nuevas_interacciones.md` | Plan para incorporar interacciones publicadas desde 2022 |
 | `tests/` | Pruebas: cadena completa de punta a punta y reintentos de red |
-| `db/csv/` | Las 21 tablas de la base, una por archivo, con los mismos nombres y columnas |
+| `db/csv/` | Las 24 tablas de la base, una por archivo, con los mismos nombres y columnas |
 | `db/README.md` | **Documentación completa del modelo de datos** |
 | `db/reporte_inconsistencias.md` | Síntesis de las correcciones aplicadas |
 
@@ -40,20 +42,27 @@ identificadores.
 
 ```powershell
 python scripts\load_gebhardt2023.py            # agrega Gebhardt et al. 2023 a la base
+python scripts\load_csvs_nuevos.py             # agrega los estudios de db/fuentes/csvs_nuevos/
 python scripts\exportar_exclusion.py           # regenera db/exclusion/ tras cada carga
 python scripts\buscar_candidatos.py            # agrega candidatos nuevos a db/candidatos/
 ```
 
-El cargador lee las fuentes versionadas en `db/fuentes/gebhardt2023/`, que son los
-Datasets S1 y S2 del artículo convertidos a CSV con `scripts\xlsx_a_csv.py`. Cada
-carga deja una bitácora de cambios en `db/cambios_gebhardt2023.md` y
-`db/cambios_gebhardt2023.csv`. `build_db.py` reconstruye la base desde cero, así que
-el cargador se debe volver a correr después de él. El criterio de carga se
-describe en [`db/README.md`](db/README.md#gebhardt-et-al-2023).
+Los cargadores se corren en ese orden después de `build_db.py`, que reconstruye
+la base desde cero. `completar_csvs_nuevos.py` solo hace falta si cambian los
+CSV de `db/fuentes/csvs_nuevos/`: consulta PubMed y NCBI y deja el resultado en
+`complementos/`, así que la carga no necesita red.
 
-La base (≈72 MB) no se versiona; sus tablas sí, en `db/csv/`: cada archivo lleva el
+Cada cargador lee fuentes versionadas en `db/fuentes/`. Las de Gebhardt son los
+Datasets S1 y S2 del artículo convertidos a CSV con `scripts\xlsx_a_csv.py`; las
+de `csvs_nuevos/` son la exportación del compendio tal como llegó (≈80 MB). Cada
+carga deja una bitácora de cambios: la de Gebhardt en `db/cambios_gebhardt2023.md` y
+`db/cambios_gebhardt2023.csv`, y la de los CSV nuevos en
+`db/cambios_csvs_nuevos.md` y `.csv`. El criterio de cada carga se describe en
+[`db/README.md`](db/README.md#fuentes-incorporadas).
+
+La base (≈190 MB) no se versiona; sus tablas sí, en `db/csv/` (≈90 MB): cada archivo lleva el
 nombre de su tabla y las columnas en el orden del esquema, de modo que la base se
-puede consultar o cargar en otro motor sin correr los scripts. Los dos scripts de
+puede consultar o cargar en otro motor sin correr los scripts. Los scripts de
 carga los reescriben, así que cualquier cambio en los datos aparece en el diff.
 
 > **Datos de origen.** El archivo `Full_data_set_en uso.csv` (≈82 MB) no se
@@ -89,7 +98,11 @@ phylum → genus → species → strain → genome → replicon
                               │
                      interaction_evidence (una fila del CSV original)
                               ├── binding_site → sequence
-                              └── study → publication / experimental_method / regulation_type
+                              ├── study → publication / experimental_method / regulation_type
+                              ├── evidence_stats (lecturas, p, odds ratio de la fuente)
+                              └── duplex_prediction (dúplex predicho, no experimental)
+
+                        srna_seed_region (región consenso de apareamiento de un sRNA)
 ```
 
 Dos identificadores se crean en el proceso: `rna.rna_id`, que designa una
@@ -118,6 +131,10 @@ consta en **[`db/README.md`](db/README.md)**.
 | Secuencias nucleotídicas únicas | 32.744 |
 | Publicaciones | 112 |
 | Cepas / genomas | 72 / 74 |
+
+Son las cifras de `build_db.py`. Con las dos fuentes incorporadas después
+(Gebhardt 2023 y los CSV nuevos) la base llega a 63.979 interacciones, 100.839
+evidencias, 29.634 moléculas, 129 publicaciones y 79 cepas en 49 especies.
 
 Todas las inconsistencias detectadas se registran en la tabla `qc_issue`, con la
 línea del archivo original, el valor observado y el criterio aplicado; ninguna

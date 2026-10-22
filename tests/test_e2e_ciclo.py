@@ -9,11 +9,12 @@ de trabajo).
 Requiere "Full_data_set_en uso.csv" en la raiz y acceso a PubMed y Europe PMC.
 Tarda unos 10 minutos.
 
-  1. build_db -> load_gebhardt2023 -> exportar_exclusion: los archivos
-     versionados que se regeneran (tablas de db/csv, reporte, bitacora de
-     Gebhardt, publicaciones.csv) tienen que salir identicos a los del
-     repositorio, y cada CSV de db/csv tiene que coincidir con su tabla de la
-     base: mismo nombre, mismas columnas en el mismo orden y mismas filas.
+  1. build_db -> load_gebhardt2023 -> load_csvs_nuevos -> exportar_exclusion:
+     los archivos versionados que se regeneran (tablas de db/csv, reporte,
+     bitacoras de las cargas, publicaciones.csv) tienen que salir identicos a
+     los del repositorio, y cada CSV de db/csv tiene que coincidir con su tabla
+     de la base: mismo nombre, mismas columnas en el mismo orden y mismas
+     filas. Los cargadores no son acumulativos: correrlos otra vez falla.
   A. Base sin Gebhardt (solo build_db), exclusion y busqueda desde cero:
      Gebhardt 2023 aparece como candidato de prioridad 1.
   B. Cribado manual: decisiones sobre dos filas y una fila agregada a mano
@@ -33,7 +34,8 @@ MANUAL = "MANUAL:regulondb-001"
 # salidas de los scripts que no se copian: tienen que regenerarse
 NO_COPIAR = ("db/exclusion/", "db/candidatos/", "tests/")
 VERSIONADOS = ["db/reporte_inconsistencias.md", "db/cambios_gebhardt2023.md",
-               "db/cambios_gebhardt2023.csv", "db/exclusion/publicaciones.csv"]
+               "db/cambios_gebhardt2023.csv", "db/cambios_csvs_nuevos.md",
+               "db/cambios_csvs_nuevos.csv", "db/exclusion/publicaciones.csv"]
 csv.field_size_limit(10 ** 7)
 
 fallas = []
@@ -56,11 +58,13 @@ def copia_limpia(destino):
     shutil.copy2(os.path.join(REPO, CRUDO), os.path.join(destino, CRUDO))
 
 
-def correr(copia, script):
+def correr(copia, script, falla=False):
     r = subprocess.run([sys.executable, os.path.join("scripts", script)], cwd=copia,
                        capture_output=True, text=True, encoding="utf-8",
                        env=dict(os.environ, PYTHONIOENCODING="utf-8"))
     print("  $ %s -> exit %d" % (script, r.returncode))
+    if falla:
+        return r
     if r.returncode:
         print(r.stdout[-3000:], r.stderr[-3000:])
         raise SystemExit("fallo %s" % script)
@@ -116,8 +120,13 @@ def main():
         log = os.path.join(copia, "db", "candidatos", "busquedas.csv")
 
         print("1. cadena de carga completa y determinismo")
-        for s in ("build_db.py", "load_gebhardt2023.py", "exportar_exclusion.py"):
+        for s in ("build_db.py", "load_gebhardt2023.py", "load_csvs_nuevos.py",
+                  "exportar_exclusion.py"):
             correr(copia, s)
+        for s in ("load_gebhardt2023.py", "load_csvs_nuevos.py"):
+            r = correr(copia, s, falla=True)
+            check(r.returncode != 0 and "ya esta" in r.stderr,
+                  "%s se niega a cargar dos veces" % s)
         csv_vs_sqlite(copia)
         tablas = sorted("db/csv/" + f for f in os.listdir(os.path.join(REPO, "db", "csv")))
         for f in tablas + VERSIONADOS:

@@ -69,7 +69,7 @@ S2_FULL = {"wt": "sd02_pEV_vs_pPhrS_Full_DESeq2.csv",
 TABLES = ["phylum", "genus", "species", "strain", "genome", "replicon", "sequence", "rna",
           "rna_sequence", "rna_synonym", "rna_locus", "technique", "experimental_method",
           "regulation_type", "publication", "genome_publication", "interaction",
-          "interaction_evidence", "binding_site", "study", "qc_issue"]
+          "interaction_evidence", "binding_site", "study", "evidence_stats", "qc_issue"]
 
 LOCUS = re.compile(r"^(PA\d{4}[a-z]?(?:\.\d+)?)(?:_[35]')?$")   # PA3305.1, PA2770_5'
 CDS_LOCUS = re.compile(r"^PA\d{4}[a-z]?$")                       # locus de gen codificante
@@ -291,7 +291,7 @@ inter_ids = {(s, t): i for i, s, t in con.execute(
     "SELECT interaction_id, srna_rna_id, target_rna_id FROM interaction WHERE genome_id = ?",
     (GENOME,))}
 preexisting_inter = set(inter_ids.values())
-ev_rows, bind_rows, study_rows = [], [], []
+ev_rows, bind_rows, study_rows, stats_rows = [], [], [], []
 
 
 def interaction(srna, target, src):
@@ -358,6 +358,12 @@ for sheet, (fn, phase) in PHASES.items():
         srna_partners[srna_id].add(tgt_id)
         iid = interaction(srna_id, tgt_id, src)
         eid = evidence(iid, TEC_RILSEQ, None if t["srna"] else REGION.get(t["cls"]), src)
+        odds = num(r["odds ratio"])                  # 'inf' cuando no hay fondo: queda nulo
+        stats_rows.append((eid, src, int(r["interactions"]),
+                           num(r["Fisher's exact test p-value"]), "fisher",
+                           odds if odds is not None and odds != float("inf") else None,
+                           "odds_ratio", None, "sRNA_es_RNA%s" % ("2" if s is side["2"] else "1"),
+                           None, None, None, None, None))
         study(eid, "RIL-Seq", None, "Hfq", phase,
               "Dataset S1 (%s) #%s: RNA1=%s, RNA2=%s; chimeric fragments=%s; odds ratio=%s; "
               "Fisher p=%s" % (fn[5:-4], r["Number"], r["RNA1 Name"], r["RNA2 Name"],
@@ -481,6 +487,7 @@ con.executemany("INSERT INTO interaction VALUES (?,?,?,?,?)", inter_new)
 con.executemany("INSERT INTO interaction_evidence VALUES (?,?,?,?,?,?,?,?,?,?,?,?)", ev_rows)
 con.executemany("INSERT INTO binding_site VALUES (?,?,?,?,?,?,?,?,?,?,?)", bind_rows)
 con.executemany("INSERT INTO study VALUES (?,?,?,?,?,?,?,?)", study_rows)
+con.executemany("INSERT INTO evidence_stats VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?)", stats_rows)
 gpb_id = ids.next("genome_publication", "genome_publication_id", "GPB", 5)
 con.execute("INSERT INTO genome_publication VALUES (?,?,?,?,?,?)",
             (gpb_id, GENOME, pub_id, len(study_rows), "derivada_de_studies", "publicada"))
@@ -621,7 +628,9 @@ L.append(md_table(["Hoja", "Filas leídas", "Cargadas", "Excluidas (sin sRNA)"],
 L.append("Cada fila cargada genera una `interaction_evidence` con técnica `%s`, un `study` "
          "con método RIL-Seq, `rbp = Hfq` y la fase en `microbe_condition`, y dos "
          "`binding_site`. El campo `comments` del `study` guarda el número de fila de la "
-         "hoja, los fragmentos quiméricos, el *odds ratio* y el p de Fisher. En %d filas "
+         "hoja, los fragmentos quiméricos, el *odds ratio* y el p de Fisher; esos tres "
+         "valores quedan además como números en `evidence_stats` (el *odds ratio* `inf` "
+         "queda nulo). En %d filas "
          "ambos ARN son sRNA; en ese caso se tomó RNA2 como regulador.\n"
          % (TEC_RILSEQ, stats["srna_srna"]))
 L.append("Filas excluidas, por combinación de clases (RNA1 / RNA2):\n")
@@ -720,7 +729,7 @@ con.commit()
 
 # reexporta las tablas modificadas para que db/csv siga en sincronia con la base
 for t in ("publication", "genome_publication", "rna", "rna_synonym", "interaction",
-          "interaction_evidence", "binding_site", "study", "qc_issue"):
+          "interaction_evidence", "binding_site", "study", "evidence_stats", "qc_issue"):
     cur = con.execute("SELECT * FROM %s" % t)   # qc_issue: issue_id es el rowid
     cols = [d[0] for d in cur.description]
     with open(os.path.join(CSVDIR, t + ".csv"), "w", newline="", encoding="utf-8") as fh:

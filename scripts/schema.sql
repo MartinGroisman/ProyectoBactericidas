@@ -11,6 +11,9 @@ PRAGMA foreign_keys = ON;
 DROP VIEW  IF EXISTS v_publicaciones_por_genoma;
 DROP VIEW  IF EXISTS v_interaccion_completa;
 DROP TABLE IF EXISTS qc_issue;
+DROP TABLE IF EXISTS srna_seed_region;
+DROP TABLE IF EXISTS duplex_prediction;
+DROP TABLE IF EXISTS evidence_stats;
 DROP TABLE IF EXISTS study;
 DROP TABLE IF EXISTS binding_site;
 DROP TABLE IF EXISTS interaction_evidence;
@@ -114,7 +117,9 @@ CREATE TABLE rna (
   plasmid_ncbi_id    TEXT,
   is_est_utr    INTEGER,
   annotation_source  TEXT,
-  seq_id        TEXT REFERENCES sequence(seq_id)   -- secuencia canonica
+  seq_id        TEXT REFERENCES sequence(seq_id),  -- secuencia canonica
+  hfq_class     TEXT,                  -- 'Clase I' / 'Clase II' (sRNA de union a Hfq)
+  hfq_class_evidence TEXT              -- cita o criterio de la clasificacion
 );
 
 -- Una molecula puede tener mas de una secuencia registrada (distintas
@@ -246,6 +251,91 @@ CREATE TABLE study (
   comments       TEXT
 );
 
+-- Estadisticos que la fuente informa para cada evidencia de alto rendimiento
+-- (quimeras de RIL-seq/CLASH, enriquecimiento de MAPS). Una fila por evidencia,
+-- solo para las que los traen. p_value_kind y score_kind dicen que es cada
+-- valor, porque cada trabajo informa un estadistico distinto.
+CREATE TABLE evidence_stats (
+  evidence_id    TEXT PRIMARY KEY REFERENCES interaction_evidence(evidence_id),
+  source_ref     TEXT,       -- registro de la fuente ('S1_exp #13', 'INT043074')
+  hybrid_reads   INTEGER,    -- lecturas o fragmentos quimericos
+  p_value        REAL,
+  p_value_kind   TEXT CHECK (p_value_kind IN ('fisher','bonferroni','fdr','fdr_bh',
+                                              'sin_especificar')),
+  score          REAL,
+  score_kind     TEXT CHECK (score_kind IN ('odds_ratio','connection_score',
+                                            'log2_fold_change')),
+  n_libraries    INTEGER,    -- replicas o librerias en que aparece el par
+  chimera_order  TEXT,       -- de que lado de la quimera esta el sRNA
+  srna_binding_verified   INTEGER,   -- la ventana se verifico contra el genoma
+  target_binding_verified INTEGER,
+  confidence_level TEXT CHECK (confidence_level IN ('alto','medio','bajo')),
+  confidence_n_measurements   INTEGER,
+  confidence_reads_percentile REAL
+);
+
+-- Prediccion computacional del duplex sRNA-blanco a partir de las ventanas de
+-- binding: no es un dato experimental. Las posiciones son relativas a la
+-- ventana (base 1); *_rel_pos es la posicion normalizada (0-1). Los *_null_*
+-- son la media de modelos nulos con secuencias barajadas (mononucleotido y
+-- dinucleotido preservado).
+CREATE TABLE duplex_prediction (
+  evidence_id          TEXT PRIMARY KEY REFERENCES interaction_evidence(evidence_id),
+  source_ref           TEXT,
+  srna_window_length   INTEGER,
+  target_window_length INTEGER,
+  delta_g              REAL,
+  n_base_pairs         INTEGER,
+  srna_core_start      INTEGER,
+  srna_core_end        INTEGER,
+  target_core_start    INTEGER,
+  target_core_end      INTEGER,
+  srna_core_rel_pos    REAL,
+  target_core_rel_pos  REAL,
+  srna_core_sequence   TEXT,
+  target_core_sequence TEXT,
+  structure            TEXT,       -- notacion de puntos y parentesis, '&' separa los ARN
+  n_helices            INTEGER,
+  helix_length         INTEGER,    -- helice mas larga
+  helix_srna_start     INTEGER,
+  helix_srna_end       INTEGER,
+  helix_target_start   INTEGER,
+  helix_target_end     INTEGER,
+  helix_srna_rel_pos   REAL,
+  helix_target_rel_pos REAL,
+  helix_srna_sequence  TEXT,
+  helix_target_sequence TEXT,
+  helix_gc             REAL,
+  delta_g_null_shuffled     REAL,
+  delta_g_null_dinucleotide REAL,
+  helix_null_shuffled       REAL,
+  helix_null_dinucleotide   REAL
+);
+
+-- Region del sRNA que concentra el apareamiento con sus blancos (posible
+-- semilla), calculada sobre todos los blancos del sRNA en la especie. rna_id
+-- queda nulo cuando el sRNA corresponde a mas de una molecula (varias cepas).
+CREATE TABLE srna_seed_region (
+  seed_region_id TEXT PRIMARY KEY,
+  species_taxid  INTEGER REFERENCES species(species_taxid),
+  srna_name      TEXT NOT NULL,
+  rna_id         TEXT REFERENCES rna(rna_id),
+  source_ref     TEXT,
+  n_partners     INTEGER,
+  n_studies      INTEGER,
+  srna_length    INTEGER,
+  peak_fraction  REAL,      -- fraccion de blancos que cubre la posicion pico
+  peak_position  INTEGER,
+  null_fraction  REAL,      -- la misma fraccion esperada al azar
+  enrichment_ratio REAL,    -- peak_fraction / null_fraction
+  p_value        REAL,
+  q_value        REAL,
+  region_start   INTEGER,
+  region_end     INTEGER,
+  region_length  INTEGER,
+  region_coverage REAL      -- fraccion de blancos cuyo apareamiento cae en la region
+);
+
 -- ------------------------------------------------------- control de calidad
 CREATE TABLE qc_issue (
   issue_id       INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -270,6 +360,7 @@ CREATE INDEX idx_bind_evi     ON binding_site(evidence_id);
 CREATE INDEX idx_study_evi    ON study(evidence_id);
 CREATE INDEX idx_study_pub    ON study(publication_id);
 CREATE INDEX idx_gpub_genome  ON genome_publication(genome_id);
+CREATE INDEX idx_seed_rna     ON srna_seed_region(rna_id);
 
 -- ------------------------------------------------------------------- vistas
 CREATE VIEW v_interaccion_completa AS
