@@ -17,6 +17,8 @@ documentadas.
 | `scripts/completar_csvs_nuevos.py` | Metadatos de PubMed y NCBI que ese compendio no trae |
 | `scripts/exportar_exclusion.py` | Lista de exclusión: publicaciones, pares y alias ya cargados, para buscar fuentes nuevas |
 | `scripts/buscar_candidatos.py` | Búsqueda en PubMed y Europe PMC de trabajos candidatos (`db/candidatos/`) |
+| `scripts/recalcular_dg.py` | Recalcula el ΔG con RNAduplex, RNAcofold e IntaRNA en contenedores Docker (`db/analisis/dg_recalculado.csv`) |
+| `scripts/analizar_dg.py` | Compara esas energías con las de la base; requiere pandas y matplotlib |
 | `docs/hoja_de_ruta_nuevas_interacciones.md` | Plan para incorporar interacciones publicadas desde 2022 |
 | `tests/` | Pruebas: cadena completa de punta a punta y reintentos de red |
 | `db/csv/` | Las 24 tablas de la base, una por archivo, con los mismos nombres y columnas |
