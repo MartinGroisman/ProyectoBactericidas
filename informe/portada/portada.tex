@@ -1,0 +1,31 @@
+% Portada institucional UNSAM completada sobre la plantilla oficial.
+% portada_base.pdf es la plantilla "2026_BC_RI_Portada documentos no tesis"
+% sin el texto de ejemplo de la tapa. Se compila con LuaLaTeX:
+%   lualatex portada.tex
+\documentclass{article}
+\usepackage[paperwidth=595.22bp,paperheight=842bp,margin=0pt]{geometry}
+\usepackage{pdfpages}
+\usepackage{fontspec}
+\usepackage{xcolor}
+
+\newfontfamily\saira{Saira.ttf}[Path=./, RawFeature={axis={wght=400}}]
+\newfontfamily\sairalight{Saira.ttf}[Path=./, RawFeature={axis={wght=300}}]
+
+% Coordenadas de la línea base en bp desde la esquina inferior izquierda,
+% tomadas de la plantilla.
+\newcommand{\linea}[4]{\put(#1,#2){\rlap{\color{white}#3#4}}}
+
+\begin{document}
+\setlength{\unitlength}{1bp}
+\includepdf[pages=1, picturecommand={%
+  \linea{42.6}{577.1}{\saira\fontsize{32}{32}\selectfont}{Interacciones}%
+  \linea{42.6}{533.1}{\saira\fontsize{32}{32}\selectfont}{sRNA–mRNA}%
+  \linea{42.6}{489.1}{\saira\fontsize{32}{32}\selectfont}{como base para}%
+  \linea{42.6}{445.1}{\saira\fontsize{32}{32}\selectfont}{el diseño racional}%
+  \linea{42.6}{401.1}{\saira\fontsize{32}{32}\selectfont}{de bactericidas}%
+  \linea{42.6}{330.0}{\saira\fontsize{18}{18}\selectfont}{Martin Ezequiel Groisman}%
+  \linea{42.6}{209.7}{\saira\fontsize{20}{20}\selectfont}{Informe final · Proyecto interno}%
+  \linea{42.6}{188.0}{\sairalight\fontsize{14}{14}\selectfont}{Licenciatura en Ciencia de Datos}%
+  \linea{42.6}{139.8}{\saira\fontsize{20}{20}\selectfont}{Noviembre de 2026}%
+}]{portada_base.pdf}
+\end{document}

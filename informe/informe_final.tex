@@ -14,7 +14,11 @@
 \usepackage{tikz}
 \usetikzlibrary{positioning,arrows.meta}
 \usepackage{caption}
+\usepackage{pdfpages}
 \usepackage[hidelinks]{hyperref}
+
+% Repositorio con el código, los datos versionados y este informe.
+\newcommand{\repo}{\url{https://github.com/MartinGroisman/ProyectoBactericidas}}
 
 \graphicspath{{figs/}}
 \captionsetup{font=small,labelfont=bf}
@@ -39,12 +43,15 @@
 \newcommand{\dG}{$\Delta G$}
 \newcommand{\codigo}[1]{\texttt{\detokenize{#1}}}
 
-\title{\textbf{Descifrando la lógica de los sARN bacterianos:\\ determinantes de unión a ARNm, chaperonas y RNasa E}\\[0.6em]
+\title{\textbf{Interacciones sRNA--mRNA como base para el\\ diseño racional de bactericidas}\\[0.6em]
 \large Informe final --- Proyecto interno de la UNSAM\\ Licenciatura en Ciencia de Datos}
 \author{Martin Ezequiel Groisman\\[0.2em] \small Responsable del proyecto: Dr. Andrés Garriz\\ \small Proyecto BACTO-RNA (UNSAM INVESTIGA, Edición 2025, código 209/25)}
-\date{Noviembre de 2026}
+\date{Noviembre de 2026\\[0.8em] \small Repositorio: \repo}
 
 \begin{document}
+% Tapa institucional UNSAM, generada en portada/portada.tex.
+\includepdf[pages=1]{portada/portada.pdf}
+\setcounter{page}{1}
 \maketitle
 
 \begin{abstract}
@@ -102,11 +109,11 @@ Las actividades se organizaron en cinco etapas:
 
 \textbf{Autoría de los datos.} El compendio de la etapa 4, incluidos los dúplex predichos y las regiones semilla consenso que se analizan más adelante, fue elaborado por el Dr.\ Garriz. La contribución del estudiante en ese punto fue la verificación e integración de esos datos a la base.
 
-\textbf{Uso de inteligencia artificial.} Se utilizó un asistente de IA (Claude, de Anthropic) como apoyo para la programación y la redacción, lo que consta en la coautoría de parte de los registros del repositorio. El diseño del trabajo, los criterios adoptados y la validación de los resultados estuvieron a cargo del estudiante.
+\textbf{Uso de inteligencia artificial.} El código y los \emph{commits} del repositorio se realizaron con inteligencia artificial generativa, como se detalla en la sección~\ref{sec:ia}.
 
 \subsection{Herramientas y metodología}
 
-El trabajo se realizó en Python, con SQLite como motor de la base y Git/GitHub para el control de versiones. Los procesos de carga emplean únicamente la biblioteca estándar, de modo que la base se puede regenerar sin instalar dependencias. Las herramientas bioinformáticas se ejecutan en contenedores de BioContainers con versión fija (ViennaRNA 2.7.2 e IntaRNA 3.4.1).
+El trabajo se realizó en Python, con SQLite como motor de la base y Git/GitHub para el control de versiones. El código, las tablas de la base exportadas a CSV, las figuras y este informe están disponibles en el repositorio \repo. Los procesos de carga emplean únicamente la biblioteca estándar, de modo que la base se puede regenerar sin instalar dependencias. Las herramientas bioinformáticas se ejecutan en contenedores de BioContainers con versión fija (ViennaRNA 2.7.2 e IntaRNA 3.4.1).
 
 Se adoptaron cuatro principios de trabajo:
 \begin{itemize}
@@ -480,6 +487,14 @@ Este trabajo recorrió buena parte del ciclo de un proyecto de ciencia de datos:
 \textbf{Reflexión.} La lección más importante es que la calidad de un modelo depende del conocimiento que se tiene sobre sus datos. Las advertencias que surgieron de este trabajo, como las ventanas no comparables entre técnicas o los pares cuyo regulador no es un sARN, son insumos directos para el reentrenamiento de los modelos de BACTO-RNA, y hubieran pasado inadvertidas en una tabla plana.
 
 %======================================================================
+\section{Uso de inteligencia artificial}
+\label{sec:ia}
+
+En el desarrollo de este proyecto se utilizó inteligencia artificial generativa. El código del repositorio (\repo) se escribió con un asistente de IA generativa. Esto abarca los programas de normalización y carga de la base, la búsqueda bibliográfica, el recálculo de la energía de hibridación y las pruebas de punta a punta. Los \emph{commits} del repositorio, incluidos sus mensajes, también se generaron con el asistente, y cada uno declara su coautoría en el registro de Git.
+
+El estudiante definió el diseño del trabajo, el modelo de datos y los criterios de depuración e integración. También indicó las tareas al asistente y revisó el código producido antes de incorporarlo. La validación de los resultados quedó a su cargo, mediante las pruebas de punta a punta, los controles con trabajos ya incluidos en la base y la comparación con los valores del compendio.
+
+%======================================================================
 \begin{thebibliography}{99}
 \bibitem{bandyra2018} Bandyra KJ, Luisi BF. RNase E and the High-Fidelity Orchestration of RNA Metabolism. \emph{Microbiol Spectr}. 2018;6(2). doi:10.1128/microbiolspec.RWR-0008-2017.
 \bibitem{busch2008} Busch A, Richter AS, Backofen R. IntaRNA: efficient prediction of bacterial sRNA targets incorporating target site accessibility and seed regions. \emph{Bioinformatics}. 2008;24(24):2849--56. doi:10.1093/bioinformatics/btn544.
@@ -499,5 +514,8 @@ Este trabajo recorrió buena parte del ciclo de un proyecto de ciencia de datos:
 \bibitem{waters2017} Waters SA, McAteer SP, Kudla G, et al. Small RNA interactome of pathogenic \emph{E. coli} revealed through crosslinking of RNase E. \emph{EMBO J}. 2017;36(3):374--387. doi:10.15252/embj.201694639.
 \bibitem{wilkinson2016} Wilkinson MD, Dumontier M, Aalbersberg IJ, et al. The FAIR Guiding Principles for scientific data management and stewardship. \emph{Sci Data}. 2016;3:160018. doi:10.1038/sdata.2016.18.
 \end{thebibliography}
+
+% Contratapa institucional UNSAM (licencia), segunda página de la plantilla.
+\includepdf[pages=2]{portada/portada_base.pdf}
 
 \end{document}
